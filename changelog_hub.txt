@@ -224,3 +224,8 @@ v7.1 Stable 2021-12-25:
 修复:
     修复 FlysoftPE Store 主页不按字母排序的问题
     修复 FlysoftPE Store 主页下载插件后无法自动添加到启动盘的问题
+
+v7.2 Stable 2021-12-25:
+修复:
+    修复 FlysoftPE 版本号会使用 FlysoftPE Hub 的版本号的问题
+    修复 FlysoftPE Hub 的版本号显示 undefined 的问题

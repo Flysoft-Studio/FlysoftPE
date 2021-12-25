@@ -505,7 +505,7 @@ function hub_version_reload() {
             version.links = version.api.pe.links;
         }
         if (packed == true) {
-            version.new = version.api.hub.latest;
+            version.newhub = version.api.hub.latest;
             version.latesthub = version.hub == version.api.hub.latest;
         }
     } catch (e) {}
