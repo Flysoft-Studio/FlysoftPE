@@ -95,7 +95,7 @@ function date(date) {
     var zero = (str) => {
         return ("00" + str).substring(("00" + str).length - 2);
     }
-    return date.getUTCFullYear() + "-" + zero(date.getUTCMonth()) + "-" + zero(date.getUTCDate()) + " " + zero(date.getUTCHours()) + ":" + zero(date.getUTCMinutes());
+    return date.getUTCFullYear() + "-" + zero(date.getUTCMonth()) + "-" + zero(date.getUTCDate()) + " " + zero(date.getUTCHours()) + ":" + zero(date.getUTCMinutes()) + ":" + zero(date.getUTCSeconds());
 }
 init(function () {
     conf_reload();

@@ -14,6 +14,7 @@ var path = {
 };
 
 var version = {
+    api: {},
     new: no,
     newhub: no,
     latest: no,
@@ -48,10 +49,18 @@ var store = {
 
 com.init(() => {
     hub_switch("home");
+    hub_version_load(true);
     hub_search();
     setInterval(hub_search, 5000);
     remote.getCurrentWindow().hookWindowMessage(0x0219, hub_search);
 });
+
+function hub_version_load(init = false) {
+    com.get("https://api.flysoft.tk/update/flysoftpe.json").then((xhr) => {
+        version.api = JSON.parse(xhr.responseText);
+        if (init == true) hub_search();
+    });
+}
 
 function hub_search() {
     if (version.stop == true) return;
@@ -86,7 +95,7 @@ function hub_search() {
                 if (version.sta.process == false) {
                     if (version.sta.finish == false) {
                         version.sta.process = true;
-                        com.get(API_STA).then((data) => {
+                        com.get(version.api.api.sta).then((data) => {
                             var json = JSON.parse(data);
                             if (json.code == 0) {
                                 version.sta.finish = true;
@@ -100,19 +109,13 @@ function hub_search() {
             }
             try {
                 if (version.channel == "beta") {
-                    version.latestusb = LATEST_BETA == version.usb;
+                    version.latestusb = version.api.pe.latest_beta == version.usb;
                 } else {
-                    version.latestusb = LATEST_STABLE == version.usb;
+                    version.latestusb = version.api.pe.latest == version.usb;
                 }
             } catch (e) {
                 com.warn("Version information not found. Refreshing version information...");
-                try {
-                    com.selector("#get_version").remove();
-                } catch (e) {}
-                var verjs = com.create("script");
-                verjs.setAttribute("id", "get_version");
-                verjs.setAttribute("src", "https://flysoft.js.org/assets/FlysoftPE/version.js");
-                com.selector("head").appendChild(verjs);
+
             }
             hub_store_event();
             break;
@@ -493,17 +496,17 @@ function hub_version_reload() {
             return;
         }
         if (version.channel == "beta") {
-            version.new = LATEST_BETA;
-            version.latest = LATEST_BETA == version.cur;
-            version.links = LATEST_LINKS;
+            version.new = version.api.pe.latest_beta;
+            version.latest = version.api.pe.latest_beta == version.cur;
+            version.links = version.api.pe.links;
         } else {
-            version.new = LATEST_STABLE;
-            version.latest = LATEST_STABLE == version.cur;
-            version.links = LATEST_LINKS;
+            version.new = version.api.pe.latest;
+            version.latest = version.api.pe.latest == version.cur;
+            version.links = version.api.pe.links;
         }
         if (packed == true) {
-            version.new = LATEST_HUB;
-            version.latesthub = version.hub == LATEST_HUB;
+            version.new = version.api.hub.latest;
+            version.latesthub = version.hub == version.api.hub.latest;
         }
     } catch (e) {}
 }
@@ -564,6 +567,7 @@ function hub_store_download(element) {
             var all = Math.ceil(info.all / 1024 / 1024) + " MB";
             com.selector("#loading_text > span").innerText = name + "  " + per + "  " + speed + "  " + now + "/" + all;
         }, () => {
+            com.selector("#loading_text > span").innerText = "";
             exec.exec("\"" + dirname + "\\data\\7z.exe\" x \"" + DLPATH + "\" \"-o" + path.plug + "\" -y", () => {
                 exec.execSync("del \"" + DLPATH + "\" /f /s /q");
                 store.list.push(name);
@@ -628,26 +632,27 @@ function hub_store_switch(id) {
         com.log("Fetching index...");
         var index;
         try {
-            com.get(hub_store_url("")).then((xhr) => {
+            com.get(version.api.api.plugins).then((xhr) => {
                 com.log("Fetched index: " + xhr.responseText);
                 index = JSON.parse(xhr.responseText);
-                if (index.code != 0) {
-                    return;
-                }
-                for (var i = 0; i < index.data.files.length; i++) {
-                    const element = index.data.files[i]
-                    if (element.type == "FOLDER") {
-                        continue;
-                    }
-                    var info = element.name.substring(0, element.name.indexOf(".")).split("_");
+                index.sort((a, b) => {
+                    if (a.FileName < b.FileName) return -1;
+                    if (a.FileName > b.FileName) return 1;
+                });
+                for (var i = 0; i < index.length; i++) {
+                    const element = index[i];
+                    var info = element.FileName.substring(0, element.FileName.indexOf(".")).split("_");
                     if (info.length != 2) continue;
                     var text;
-                    if (fs.existsSync(path.plug + "\\" + element.name) == true) {
+                    if (fs.existsSync(path.plug + "\\" + element.FileName) == true) {
                         text = lang.get("com_update");
                     } else {
                         text = lang.get("com_add");
                     }
-                    html = html + "<li><div class=\"card\"><div class=\"card_title\">" + info[0] + "</div><div class=\"card_body\"><div class=\"content\">" + lang.get("hub_store_author") + info[1] + "</div><div class=\"content\">" + lang.get("hub_store_time") + index.data.files[i].time + "</div><div class=\"card_btn\"><div class=\"button button_no\" data-url=\"" + index.data.files[i].url + "\" data-name=\"" + index.data.files[i].name + "\" onclick=\"hub_store_download(this)\">" + text + "</div></div></div></div></li>";
+                    var temp1 = element.UpdateAt.split("+");
+                    var temp2 = temp1[0].split("T");
+                    var time = temp2[0] + " " + temp2[1];
+                    html = html + "<li><div class=\"card\"><div class=\"card_title\">" + info[0] + "</div><div class=\"card_body\"><div class=\"content\">" + lang.get("hub_store_author") + info[1] + "</div><div class=\"content\">" + lang.get("hub_store_time") + time + "</div><div class=\"card_btn\"><div class=\"button button_no\" data-url=\"" + element.Url + "\" data-name=\"" + element.FileName.substring(0, element.FileName.indexOf(".")) + "\" onclick=\"hub_store_download(this)\">" + text + "</div></div></div></div></li>";
                 }
                 com.selector("#tab_store_list").innerHTML = html;
                 com.selector("#tab_store_list").style.pointerEvents = null;
@@ -879,7 +884,7 @@ function hub_update_hub() {
     version.stop = true;
     hub_switch("update");
     no_sidebar = true;
-    var link = LATEST_HUBLINK;
+    var link = version.api.hub.link;
     hub_download(link, root + "\\resources", "app_update.asar", (info) => {
         hub_update_handler(info);
     }, () => {
@@ -915,8 +920,8 @@ function hub_showinsert() {
     });
 }
 
-function hub_store_url(file) {
-    return API_PLUG + "?path=" + encodeURIComponent("/" + file) + "&password=&orderBy=name&orderDirection=";
+function hub_store_url() {
+    return version.api.api.plugins;
 }
 
 function hub_download(url, dir, name, cbprogress, cbcomplete) {

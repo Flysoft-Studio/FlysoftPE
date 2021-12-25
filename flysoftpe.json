@@ -1,22 +1,22 @@
 {
     "api": {
         "egg": "https://hiflysoft-my.sharepoint.com/:v:/g/personal/flysoft_hiflysoft_onmicrosoft_com/EfLhgA-Y3I1HniQvO7hw3_wBkVVxwowtfyuLN0JRjdkt5A?download=1",
-        "plugins": "http://flyindex.gzs.vin/api/list/1",
+        "plugins": "https://api.flysoft.tk/download/flysoftpe.php?mode=store&op=list",
         "sta": "http://flystatistics.gzs.vin/api/?op=add&key=flysoftkey&item=flysoftpe"
     },
     "hub": {
-        "latest": "7.0",
-        "link": "https://api.flysoft.tk/download/flysoftpe.php?soft=hub_asar"
+        "latest": "7.1",
+        "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=hub_asar"
     },
     "pe": {
         "latest": "5.1",
         "latest_beta": "5.1",
         "links": {
             "zh-cn": {
-                "wbp": {
-                    "name": "阿里云盘 (推荐)",
-                    "link": "http://aliyun.imiliy.cn/%E8%BD%AF%E4%BB%B6/FlysoftPE.iso",
-                    "link_beta": "http://aliyun.imiliy.cn/%E8%BD%AF%E4%BB%B6/FlysoftPE.iso"
+                "flysoft": {
+                    "name": "官方源 (推荐)",
+                    "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=pe",
+                    "link_beta": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=pe_beta"
                 },
                 "gz1": {
                     "name": "鸽子FB1 (世纪互联, 推荐)",
@@ -53,7 +53,7 @@
                     "link": "https://www.crabapi.cn/api/v5/flysoftpe/dl.php?source=upyun&channel=stable",
                     "link_beta": "https://www.crabapi.cn/api/v5/flysoftpe/dl.php?source=upyun&channel=beta"
                 },
-                "flysoft": {
+                "flysoftod": {
                     "name": "官方源 (OneDrive)",
                     "link": "https://hiflysoft-my.sharepoint.com/:u:/g/personal/flysoft_hiflysoft_onmicrosoft_com/EYdkYCootDlKlvG-HyGqmM4BruhDK5OlXSs2x2_SCmhQQQ?download=1",
                     "link_beta": "https://hiflysoft-my.sharepoint.com/:u:/g/personal/flysoft_hiflysoft_onmicrosoft_com/EYdkYCootDlKlvG-HyGqmM4BruhDK5OlXSs2x2_SCmhQQQ?download=1"

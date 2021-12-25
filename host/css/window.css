@@ -154,16 +154,21 @@ input[type="text"]:focus {
     box-shadow: 0 2px 6px rgb(0, 0, 0, 0.1);
 }
 
-#title {
+#title,
+#title_with_sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     height: 34px;
     display: flex;
     flex-direction: row;
     z-index: 1000000;
     margin: 0;
+}
+
+#title_with_sidebar {
+    left: 200px;
 }
 
 #drag {
@@ -322,7 +327,6 @@ input[type="text"]:focus {
     font-weight: 500;
     font-size: 25px;
     display: inline-block;
-    margin-left: 10px;
 }
 
 .sidebar_menu {
