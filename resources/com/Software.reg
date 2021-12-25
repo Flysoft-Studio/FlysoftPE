@@ -1,0 +1,270 @@
+Windows Registry Editor Version 5.00
+
+;Profile
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-18]
+"ProfileImagePath"="X:\\Users\\Default"
+
+;CompMgr
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Manage\command]
+@=hex(2):22,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,\
+  00,25,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,6d,00,\
+  6d,00,63,00,2e,00,65,00,78,00,65,00,22,00,20,00,22,00,25,00,53,00,79,00,73,\
+  00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,00,73,00,\
+  74,00,65,00,6d,00,33,00,32,00,5c,00,63,00,6f,00,6d,00,70,00,6d,00,67,00,6d,\
+  00,74,00,2e,00,6d,00,73,00,63,00,22,00,00,00
+
+;System Info
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{BB06C0E4-D293-4F75-8A90-CB05B6477EEE}]
+"System.ApplicationName"="Microsoft.NSystem"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}]
+@="System"
+"InfoTip"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,\
+  6f,00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,\
+  00,73,00,79,00,73,00,74,00,65,00,6d,00,63,00,70,00,6c,00,2e,00,64,00,6c,00,\
+  6c,00,2c,00,2d,00,32,00,23,00,69,00,6d,00,6d,00,75,00,74,00,61,00,62,00,6c,\
+  00,65,00,31,00,00,00
+"LocalizedString"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,\
+  6f,00,6f,00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,63,00,70,00,6c,00,2e,00,64,00,\
+  6c,00,6c,00,2c,00,2d,00,31,00,23,00,69,00,6d,00,6d,00,75,00,74,00,61,00,62,\
+  00,6c,00,65,00,31,00,00,00
+"System.ApplicationName"="Microsoft.System"
+"System.ControlPanel.Category"="5"
+"System.ControlPanel.EnableInSafeMode"=dword:00000003
+"System.Software.TasksFileUrl"="Internal"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}\DefaultIcon]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,69,00,6d,00,\
+  61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,31,\
+  00,34,00,39,00,00,00
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}\InProcServer32]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,73,00,68,00,\
+  64,00,6f,00,63,00,76,00,77,00,2e,00,64,00,6c,00,6c,00,00,00
+"ThreadingModel"="Apartment"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}\Instance]
+"CLSID"="{328B0346-7EAF-4BBE-A479-7CB88A095F5B}"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}\Instance\InitPropertyBag]
+"ResourceDLL"=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,\
+  00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,\
+  73,00,79,00,73,00,74,00,65,00,6d,00,63,00,70,00,6c,00,2e,00,64,00,6c,00,6c,\
+  00,00,00
+"ResourceID"=dword:00000064
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}\ShellFolder]
+"Attributes"=dword:a0000000
+"WantsParseDisplayName"=""
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}]
+@="System"
+
+;ContextMenu
+
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\DesktopBackground\Shell\Display]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\DesktopBackground\Shell\Personalize]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Directory\Background\Shell\Powershell]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Directory\Shell\Powershell]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Directory\Shell\cmd]
+"Extended"=-
+"LegacyDisable"=-
+"ProgrammaticAccessOnly"=-
+"HideBasedOnVelocityId"=-
+
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Directory\Shell\find]
+"LegacyDisable"=-
+"ProgrammaticAccessOnly"=-
+"HideBasedOnVelocityId"=-
+
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Drive\Shell\Powershell]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Drive\Shell\cmd]
+"Extended"=-
+"HideBasedOnVelocityId"=-
+
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Folder\ShellEx\ContextMenuHandlers\Library Location]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Folder\shell\pintohome]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\ModernSharing]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\Drive\shell\Powershell]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\.lnk\ShellNew]
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoNetConnectDisconnect"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\fs_software\Policies\Microsoft\Windows\Explorer]
+"NoUseStoreOpenWith"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\Directory\Background\Shell\Cmd]
+@="@shell32.dll,-8506"
+"Extended"=-
+"HideBasedOnVelocityId"=-
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\DesktopBackground\Shell\FlysoftPE]
+@="&FlysoftPE Hub"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\DesktopBackground\Shell\FlysoftPE\command]
+
+;Load As Plugin
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\Directory\shell\LoadAsPlugin]
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\Directory\shell\LoadAsPlugin\command]
+@="cmd.exe /c \"main.cmd plugin \"%1\"\""
+
+;FlysoftPE Hub
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\.fshub]
+@="FlysoftPE.Hub"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\FlysoftPE.Hub]
+@="FlysoftPE.Hub"
+"EditFlags"=dword:00000002
+"NeverShowExt"=""
+"FriendlyTypeName"="FlysoftPE Hub"
+
+;OpenShell
+
+[HKEY_LOCAL_MACHINE\fs_software\OpenShell]
+"Path"="X:\\Program Files\\OpenShell\\"
+
+;Folder
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{724EF170-A42D-4FEF-9F26-B60E846FBA4F}]
+"Attributes"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{B97D20BB-F46A-4C97-BA10-5E3608430854}]
+"Attributes"=dword:00000002
+
+;Text file
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\.inf]
+@="inffile"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\.ini]
+@="inifile"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\.log]
+@="txtfile"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\.txt]
+@="txtfile"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\.txt\ShellNew]
+"NullFile"=""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\.zip\ShellNew]
+"NullFile"=""
+"Data"=hex:50,4b,05,06,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\inffile]
+@="Setup Information"
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\inffile\DefaultIcon]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,69,00,6d,00,\
+  61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,36,\
+  00,39,00,00,00
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\inffile\shell\open\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\inifile]
+@="Configuration Settings"
+"EditFlags"=dword:00200000
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\inifile\DefaultIcon]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,69,00,6d,00,\
+  61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,36,\
+  00,39,00,00,00
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\inifile\shell\open\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\txtfile]
+@="Text Document"
+"EditFlags"=dword:00210000
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\txtfile\DefaultIcon]
+@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\
+  00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,69,00,6d,00,\
+  61,00,67,00,65,00,72,00,65,00,73,00,2e,00,64,00,6c,00,6c,00,2c,00,2d,00,31,\
+  00,30,00,32,00,00,00
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\txtfile\shell\open\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\batfile\shell\edit\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\batfile\shell\print\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" /v \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\cmdfile\shell\edit\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\cmdfile\shell\print\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" /v \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\jsfile\shell\edit\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\jsfile\shell\print\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" /v \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\vbefile\shell\edit\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\vbefile\shell\print\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" /v \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\vbsfile\shell\edit\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\vbsfile\shell\print\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" /v \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\regfile\shell\edit\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\regfile\shell\print\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" /v \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\SystemFileAssociations\text\shell\edit\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\SystemFileAssociations\text\shell\open\command]
+@="\"X:\\Program Files\\Notepad\\Notepad3.exe\" \"%1\""
+
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\.rtf]
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\rtffile]
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\PropertySystem\PropertyHandlers\.accountpicture-ms]
+@="{9a02e012-6303-4e1e-b9a1-630f802592c5}"
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows NT\CurrentVersion\MTCUVC]
+"EnableMtcUvc"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
+"UseWin32TrayClockExperience"=dword:00000000
+
+;QuickAccess
+
+;[HKEY_LOCAL_MACHINE\fs_software\Classes\CLSID\{679f85cb-0220-4080-b29b-5540cc05aab6}\ShellFolder]
+;"Attributes"=dword:a0600000
+
+;OEM Information
+
+[HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\OEMInformation]
+"Manufacturer"="FlysoftPE"
+"Model"="Unknown"
+"SupportHours"="10:00 - 20:30 (UTC/GMT+08:00)"
+"SupportURL"="https://flysoft.js.org/support/"
+"Logo"="X:\\FlysoftPE\\res\\oem.bmp"

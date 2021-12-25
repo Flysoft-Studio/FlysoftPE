@@ -1,0 +1,10 @@
+ControlSet001\Control\ProductOptions
+ControlSet001\Services\CoreMessagingRegistrar
+ControlSet001\Services\dot3svc
+ControlSet001\Services\FontCache
+ControlSet001\Services\tcpipreg
+ControlSet001\Services\tcpiptunnel
+ControlSet001\Services\vwifibus
+ControlSet001\Services\Wcmsvc
+ControlSet001\Services\WlanSvc
+Setup\AllowStart\CoreMessagingRegistrar

@@ -1,0 +1,91 @@
+{
+    "theme": {
+        "file": "/ventoy/themes/default/theme.txt",
+        "gfxmode": "1920x1080",
+        "display_mode": "GUI",
+        "serial_param": "--unit=0 --speed=9600",
+        "ventoy_left": "5%",
+        "ventoy_top": "95%",
+        "ventoy_color": "#eff0f1",
+        "fonts": [
+            "/ventoy/themes/default/terminus-12.pf2",
+            "/ventoy/themes/default/terminus-14.pf2",
+            "/ventoy/themes/default/terminus-16.pf2",
+            "/ventoy/themes/default/DejaVuSans-48.pf2",
+            "/ventoy/themes/default/DejaVuSans-Regular-14.pf2"
+        ]
+    },
+    "menu_class": [
+        {
+            "key": "kubuntu",
+            "class": "kubuntu"
+        },
+        {
+            "key": "ubuntu",
+            "class": "ubuntu"
+        },
+        {
+            "key": "pop-os",
+            "class": "pop-os"
+        },
+        {
+            "key": "arch",
+            "class": "arch"
+        },
+        {
+            "key": "linuxmint",
+            "class": "linuxmint"
+        },
+        {
+            "key": "opensuse",
+            "class": "opensuse"
+        },
+        {
+            "key": "elementary",
+            "class": "elementary"
+        },
+        {
+            "key": "manjaro",
+            "class": "manjaro"
+        },
+        {
+            "key": "debian",
+            "class": "debian"
+        },
+        {
+            "key": "deepin",
+            "class": "deepin"
+        },
+        {
+            "key": "solus",
+            "class": "solus"
+        },
+        {
+            "key": "zorin-os",
+            "class": "zorin-os"
+        },
+        {
+            "key": "windows",
+            "class": "windows"
+        },
+        {
+            "key": "hirens",
+            "class": "windows"
+        },
+        {
+            "key": "iso",
+            "class": "iso"
+        }
+    ],
+    "control": [
+        {"VTOY_MAX_SEARCH_LEVEL": "0"},
+        {"VTOY_MENU_TIMEOUT": "3"},
+        {"VTOY_DEFAULT_IMAGE": "/Flysoft.wim"}
+    ],
+    "menu_alias": [
+        {
+            "image": "/Flysoft.wim",
+            "alias": "FlysoftPE"
+        }
+    ]
+}

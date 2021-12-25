@@ -1,0 +1,15 @@
+body {
+    background-color: #000000;
+}
+
+video {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    outline: none;
+}

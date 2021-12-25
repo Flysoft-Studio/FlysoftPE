@@ -1,0 +1,17 @@
+.color {
+    background: linear-gradient(90deg, #2bbaee, #873add, #1aff66, #ff4245, #e4e72a, #ff9900, #19d538, #0099ff, #ff00ea, #00ffc8, #2bbaee, #873add, #1aff66, #ff4245, #e4e72a, #ff9900, #19d538, #0099ff, #ff00ea, #00ffc8, #2bbaee);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-size: 400% 400%;
+    animation: color 10s linear infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 400% 50%;
+    }
+}

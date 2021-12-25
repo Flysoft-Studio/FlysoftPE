@@ -1,0 +1,16 @@
+Classes\.accountpicture-ms
+Classes\accountpicturefile
+Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel
+Microsoft\.NETFramework
+Microsoft\Fusion
+Microsoft\IME\15.0\Shared
+Microsoft\IME\PlugInDict
+Microsoft\IMETC
+Microsoft\InputMethod
+Microsoft\NET Framework Setup
+Microsoft\Windows\CurrentVersion\AppModel
+Microsoft\Windows\CurrentVersion\AppX
+Microsoft\Windows\CurrentVersion\SideBySide\Winners
+Microsoft\Windows\DWM
+WOW6432Node\Microsoft\.NETFramework
+WOW6432Node\Microsoft\NET Framework Setup

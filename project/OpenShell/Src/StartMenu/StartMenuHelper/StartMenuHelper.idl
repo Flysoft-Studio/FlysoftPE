@@ -1,0 +1,52 @@
+// StartMenuHelper.idl : IDL source for StartMenuHelper
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (StartMenuHelper.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "shobjidl.idl";
+
+[
+	object,
+	uuid(379C7129-9462-42A8-A5F3-68A65A0DEF8A),
+	helpstring("IStartMenuExt Interface"),
+	pointer_default(unique)
+]
+interface IStartMenuExt : IUnknown{
+};
+[
+	uuid(6A62B77B-9003-49FA-83D7-1BF82296EF49),
+	version(1.0),
+	helpstring("StartMenuHelper 1.0 Type Library")
+]
+library StartMenuHelperLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E595F05F-903F-4318-8B0A-7F633B520D2B),
+		helpstring("StartMenuExt Class")
+	]
+	coclass StartMenuExt
+	{
+		[default] interface IStartMenuExt;
+	};
+	[
+		uuid(82e749ed-b971-4550-baf7-06aa2bf7e836)
+	]
+	coclass ModernSettingsShellFolder
+	{
+		interface IShellFolder2;
+		interface IPersistFolder2;
+	};
+	[
+		uuid(5ab14324-c087-42c1-b905-a0bfdb4e9532)
+	]
+	coclass ModernSettingsContextMenu
+	{
+		interface IContextMenu;
+		interface IShellExtInit;
+		interface IObjectWithSite;
+	};
+};

@@ -1,0 +1,102 @@
+#wizard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#wizard>div {
+    display: none;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+.wiz_title {
+    margin-left: 60px;
+    margin-top: 60px;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wiz_title>span:nth-child(1) {
+    margin-right: 10px;
+}
+
+.wiz_buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.wiz_content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.wiz_card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wiz_card>div {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 20px;
+    transition: background-color 0.1s ease, transform 0.2s ease;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.wiz_card_active {
+    transform: scale(0.85) !important;
+    background-color: rgba(210, 210, 210, 0.5) !important;
+}
+
+.wiz_card>div>span:nth-child(1) {
+    font-size: 50px;
+}
+
+.wiz_card>div:hover {
+    transform: scale(0.95);
+    background-color: rgba(230, 230, 230, 0.4);
+}
+
+.wiz_description {
+    display: none;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.wiz_load {
+    width: 100px;
+    height: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .wiz_card_active {
+        background-color: rgb(70, 70, 70) !important;
+    }
+
+    .wiz_card>div:hover {
+        transform: scale(0.95);
+        background-color: rgb(85, 85, 85);
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlysoftPE.Import.Host</title>
+    <link rel="stylesheet" href="./css/window.css">
+    <link rel="stylesheet" href="./css/install.css">
+    <script src="./js/std.js"></script>
+    <script src="./js/install.js"></script>
+    <script src="./js/fontawesome.pro.js"></script>
+</head>
+
+<body>
+    <div class="color-bg"></div>
+    <div id="title"></div>
+    <div id="mask"></div>
+    <div id="popwin">
+        <div id="pop_title"></div>
+        <div id="pop_content"></div>
+        <div id="pop_button"></div>
+    </div>
+    <div id="wizard">
+        <div id="wiz_welcome">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-paper-plane"></span>
+                </span>
+                <div class="wiz_content"></div>
+                <span class="text">{ip_welcome}</span>
+            </div>
+            <div class="wiz_buttons">
+                <div class="button" onclick="wiz_import_next()">
+                    <span class="text">{com_next}</span>
+                </div>
+            </div>
+        </div>
+        <div id="wiz_import">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-copy"></span>
+                </span>
+                <span class="text">{ip_import}</span>
+            </div>
+            <div class="wiz_content">
+                <svg version="1.1" role="presentation" viewBox="0 0 100 100" class="wiz_load">
+                    <circle cx="50" cy="50" r="20" stroke="#147aff" stroke-width="4" stroke-linecap="round" fill="none">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1.5s"
+                            values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
+                        <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1.5s"
+                            values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882"
+                            keyTimes="0;0.5;1"></animate>
+                    </circle>
+                </svg>
+            </div>
+        </div>
+        <div id="wiz_complete">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-check"></span>
+                </span>
+                <span class="text">{ip_complete}</span>
+            </div>
+            <div class="wiz_buttons">
+                <div class="button" onclick="remote.getCurrentWindow().close();">
+                    <span class="text">{com_complete}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

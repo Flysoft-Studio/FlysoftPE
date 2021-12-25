@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Comfortaa Light";
+    src: url(../font/Comfortaa.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    user-select: none;
+    background-color: transparent;
+    font-family: "Comfortaa Light";
+}
+
+#nocursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: none;
+    z-index: 10000000;
+}
+
+#full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background-color: rgb(54, 54, 54);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0;
+    z-index: -100;
+}
+
+#dialog {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgb(0, 0, 0);
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    border: rgb(122, 122, 122) 1px solid;
+    width: 500px;
+    height: 300px;
+}
+
+#boot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#boot>div {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#boot>svg {
+    width: 40%;
+    height: auto;
+}
+
+#powered {
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.8;
+    padding-bottom: 10px;
+    text-shadow: 0 1px 4px rgb(190, 190, 190);
+}
+
+#flysoft {
+    font-size: 45px;
+    opacity: 1;
+    text-shadow: 0 1px 4px rgb(190, 190, 190);
+}

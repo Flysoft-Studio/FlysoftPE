@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlysoftPE.Install.Host</title>
+    <link rel="stylesheet" href="./css/window.css">
+    <link rel="stylesheet" href="./css/install.css">
+    <script src="./js/std.js"></script>
+    <script src="./js/install.js"></script>
+    <script src="./js/fontawesome.pro.js"></script>
+</head>
+
+<body>
+    <div class="color-bg"></div>
+    <div id="title"></div>
+    <div id="mask"></div>
+    <div id="popwin">
+        <div id="pop_title"></div>
+        <div id="pop_content"></div>
+        <div id="pop_button"></div>
+    </div>
+    <div id="wizard">
+        <div id="wiz_welcome">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-paper-plane"></span>
+                </span>
+                <div class="wiz_content"></div>
+                <span class="text">{wiz_welcome}</span>
+            </div>
+            <div class="wiz_buttons">
+                <div class="button" onclick="wiz_switch('mode')">
+                    <span class="text">{com_next}</span>
+                </div>
+            </div>
+        </div>
+        <div id="wiz_mode">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-wrench"></span>
+                </span>
+                <span class="text">{wiz_mode}</span>
+            </div>
+            <div class="wiz_content">
+                <div class="wiz_card">
+                    <div id="wiz_mode_ramos" onclick="wiz_mode_switch('ramos')">
+                        <span>
+                            <span class="fas fa-browser"></span>
+                        </span>
+                        <div class="text">{wiz_mode_ramos}</div>
+                    </div>
+                    <div id="wiz_mode_pe" onclick="wiz_mode_switch('pe')">
+                        <span>
+                            <span class="fas fa-wrench"></span>
+                        </span>
+                        <div class="text">{wiz_mode_pe}</div>
+                    </div>
+                </div>
+                <div id="wiz_mode_description_ramos" class="wiz_description text">{wiz_mode_description_ramos}</div>
+                <div id="wiz_mode_description_pe" class="wiz_description text">{wiz_mode_description_pe}</div>
+            </div>
+            <div class="wiz_buttons">
+                <div class="button button_no" onclick="wiz_switch('device')">
+                    <span class="text">{com_skip}</span>
+                </div>
+                <div class="button" onclick="if(mode_cur!=undefined) wiz_switch('device')">
+                    <span class="text">{com_next}</span>
+                </div>
+            </div>
+        </div>
+        <div id="wiz_device">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-usb-drive"></span>
+                </span>
+                <span class="text">{wiz_device}</span>
+            </div>
+            <div class="wiz_content">
+                <div class="wiz_card">
+                    <div id="wiz_device_usb" onclick="wiz_device_switch('usb')">
+                        <span>
+                            <span class="fas fa-usb-drive"></span>
+                        </span>
+                        <div class="text">{wiz_device_usb}</div>
+                    </div>
+                    <div id="wiz_device_iso" onclick="wiz_device_switch('iso')">
+                        <span>
+                            <span class="fas fa-compact-disc"></span>
+                        </span>
+                        <div class="text">{wiz_device_iso}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wiz_buttons">
+                <div class="button" onclick="wiz_device_next()">
+                    <span class="text">{com_next}</span>
+                </div>
+            </div>
+        </div>
+        <div id="wiz_install">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-paperclip"></span>
+                </span>
+                <span class="text">{wiz_install}</span>
+            </div>
+            <div class="wiz_content">
+                <svg version="1.1" role="presentation" viewBox="0 0 100 100" class="wiz_load">
+                    <circle cx="50" cy="50" r="20" stroke="#147aff" stroke-width="4" stroke-linecap="round" fill="none">
+                        <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1.5s"
+                            values="0 50 50;180 50 50;720 50 50" keyTimes="0;0.5;1"></animateTransform>
+                        <animate attributeName="stroke-dasharray" repeatCount="indefinite" dur="1.5s"
+                            values="18.84955592153876 169.64600329384882;94.2477796076938 94.24777960769377;18.84955592153876 169.64600329384882"
+                            keyTimes="0;0.5;1"></animate>
+                    </circle>
+                </svg>
+            </div>
+        </div>
+        <div id="wiz_complete">
+            <div class="wiz_title">
+                <span>
+                    <span class="fas fa-check"></span>
+                </span>
+                <span class="text">{wiz_complete}</span>
+            </div>
+            <div class="wiz_buttons">
+                <div class="button" onclick="remote.getCurrentWindow().close();">
+                    <span class="text">{com_complete}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

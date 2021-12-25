@@ -1,0 +1,26 @@
+#window {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0;
+    z-index: -100;
+    transition: left 0.1s ease, top 0.1s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    #window {
+        background-color: rgba(34, 34, 34, 0.90);
+    }
+}

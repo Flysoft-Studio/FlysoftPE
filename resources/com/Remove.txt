@@ -1,0 +1,28 @@
+Users\Default\AppData\Roaming\Microsoft\Windows\SendTo\Fax Recipient.lnk
+Users\Default\AppData\Roaming\Microsoft\Windows\SendTo\Mail Recipient.MAPIMail
+Windows\System32\bdeunlock.exe
+Windows\System32\bmrui.exe
+Windows\System32\diagnosticdataquery.dll
+Windows\System32\DiagSvcs\*.*
+Windows\System32\diagtrack.dll
+Windows\System32\manage-bde.exe
+Windows\System32\mdsched.exe
+Windows\System32\Narrator.exe
+Windows\System32\NarratorControlTemplates.xml
+Windows\System32\nbtstat.exe
+Windows\System32\ntprint.dll
+Windows\System32\ntprint.exe
+Windows\System32\pkgmgr.exe
+Windows\System32\print.exe
+Windows\System32\rasctrnm.h
+Windows\System32\rdrleakdiag.exe
+Windows\System32\reagent.dll
+Windows\System32\recdisc.exe
+Windows\System32\recover.exe
+Windows\System32\Recovery\*.*
+Windows\System32\regedt32.exe
+Windows\System32\reinfo.dll
+Windows\System32\repair-bde.exe
+Windows\System32\rstrui.dll
+Windows\System32\Sysprep\*.*
+Windows\System32\WindowsPowerShell\*.*
