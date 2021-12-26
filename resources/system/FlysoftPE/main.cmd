@@ -388,8 +388,8 @@ start "" /high "brightness.exe" "%FSPE_BRIGHTNESS%"
 del /f /s /q "%FSPE_TEMP%\WATCH_INIT.tmp"
 call:log "Starting ime"
 start "" /high "%SystemRoot%\System32\ctfmon.exe"
-call:log "Starting T-Clock"
-start "" /high "%ProgramFiles%\T-Clock\Clock64.exe"
+::call:log "Starting T-Clock"
+::start "" /high "%ProgramFiles%\T-Clock\Clock64.exe"
 call:log "Loading plugins..."
 set PATH_EXT=%FSPE_USER%\plugins
 call:plugins

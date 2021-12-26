@@ -636,7 +636,6 @@ body.close .content {
   }
 
   body.close .sidebar-toggle {
-    background-color: rgba(255, 255, 255, 0.8);
     transition: 1s background-color;
     width: 284px;
     padding: 10px;

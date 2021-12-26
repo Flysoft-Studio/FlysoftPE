@@ -15,6 +15,7 @@ var path = {
 
 var version = {
     api: {},
+    docs: no,
     new: no,
     newhub: no,
     latest: no,
@@ -49,13 +50,6 @@ var store = {
 
 com.init(() => {
     hub_switch("home");
-    var wikilang;
-    if (lang.cur() == "zh-cn") {
-        wikilang = "zh";
-    } else {
-        wikilang = "en";
-    }
-    com.selector("#tab_docs_web").src = "https://docs.flysoft.tk/pe/#/" + wikilang + "/";
     hub_version_load(true);
     hub_search();
     setInterval(hub_search, 5000);
@@ -66,6 +60,16 @@ com.init(() => {
 function hub_version_load(init = false) {
     com.get("https://api.flysoft.tk/update/flysoftpe.json").then((xhr) => {
         version.api = JSON.parse(xhr.responseText);
+        if (version.docs != true) {
+            var wikilang;
+            if (lang.cur() == "zh-cn") {
+                wikilang = "zh";
+            } else {
+                wikilang = "en";
+            }
+            com.selector("#tab_docs_web").src = "https://docs.flysoft.tk/pe/#/" + wikilang + "/";
+            version.docs = true;
+        }
         if (init == true) hub_search();
     });
 }
