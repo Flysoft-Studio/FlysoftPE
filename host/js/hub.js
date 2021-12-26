@@ -1007,6 +1007,11 @@ function hub_switch(tab) {
             setTimeout(hub_drv_reload, 200);
         }
     }
+    if (tab == "docs") {
+        com.selector(".titlebar").classList.add("with_sidebar_wiki");
+    } else {
+        com.selector(".titlebar").classList.remove("with_sidebar_wiki");
+    }
     var ele = com.selector(".sidebar_menu_li", true);
     tab_cur = tab;
     for (var i = 0; i < ele.length; i++) {

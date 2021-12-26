@@ -34,7 +34,9 @@ function create_win(arg, url, closecb) {
         event.preventDefault();
         window.webContents.session.clearCache().then(() => {
             log("Successfully cleaned cache.");
-            window.destroy();
+            try {
+                window.destroy();
+            } catch (e) {}
         });
     });
     window.on("closed", function (event) {

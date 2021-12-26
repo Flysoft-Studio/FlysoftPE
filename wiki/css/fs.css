@@ -422,7 +422,6 @@ main.hidden {
 
 .sidebar-toggle {
   background-color: transparent;
-  background-color: rgba(255, 255, 255, 0.8);
   border: 0;
   outline: none;
   padding: 10px;
@@ -1139,4 +1138,55 @@ code .token {
   min-height: 1.5rem;
   position: relative;
   left: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ffffff;
+    background-color: rgb(36, 36, 36);
+  }
+
+  .sidebar {
+    color: #ffffff;
+    background-color: rgb(61, 61, 61);
+  }
+
+  .markdown-section pre>code {
+    color: #ffffff;
+  }
+
+  .input-wrap>input {
+    color: #ffffff;
+    background-color: rgb(75, 75, 75);
+  }
+
+  .markdown-section code,
+  .markdown-section pre {
+    background-color: rgb(77, 77, 77);
+  }
+
+  .markdown-section tr:nth-child(2n) {
+    background-color: rgb(77, 77, 77);
+  }
+
+  .markdown-section td,
+  .markdown-section th {
+    border: 1px solid #8b8b8b;
+  }
+
+  .sidebar ul li a {
+    color: #c2c2c2;
+  }
+
+  .anchor span {
+    color: #c2c2c2;
+  }
+
+  .markdown-section h1,
+  .markdown-section h2,
+  .markdown-section h3,
+  .markdown-section h4,
+  .markdown-section strong {
+    color: #f3f3f3;
+  }
 }

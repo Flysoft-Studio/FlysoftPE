@@ -233,9 +233,10 @@ v7.2 Stable 2021-12-25:
     修复 FlysoftPE 版本号会使用 FlysoftPE Hub 的版本号的问题
     修复 FlysoftPE Hub 的版本号显示 undefined 的问题
 
-v7.3 Stable 2021-12-26:
+v8.0 Stable 2021-12-26:
 新增:
     * 新增 FlysoftPE 文档查看器
 
 修复:
-    修复在断网状态下打开 Hub, Hub 需重启才能联网的问题 
+    修复在断网状态下打开 Hub, Hub 需重启才能联网的问题
+    修复未联网状态下显示异常的问题

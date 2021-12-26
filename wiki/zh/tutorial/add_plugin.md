@@ -2,7 +2,7 @@
 
 **请从 FlysoftPE Store 中获取安全, 可信的插件!**
 
-**请适量添加插件, 如果无法正常启动 PE, 请访问[错误排查](zh/faq/error).**
+**请适量添加插件, 如果无法正常启动 PE, 请访问[错误排查](zh/faq/FlysoftPE/error).**
 
 1. FlysoftPE Hub
 
