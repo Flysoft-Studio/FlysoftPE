@@ -50,12 +50,16 @@
                 <span class="fad fa-cogs fa-fw"></span>
                 <div class="text">{hub_menu_drivers}</div>
             </li>
+            <li class="sidebar_menu_li" data-id="docs" onclick="hub_switch(this.dataset.id);">
+                <span class="fad fa-book fa-fw"></span>
+                <div class="text">{hub_menu_docs}</div>
+            </li>
         </ul>
         <div class="sidebar_powered color">Powered by Flysoft</div>
     </div>
     <div id="main">
         <div id="tab_home">
-            <div class="tab_center">
+            <div class="tab_center" id="tab_home_card">
                 <div class="big_icon icon" id="tab_home_icon"></div>
                 <div class="title" id="tab_home_title"></div>
                 <div class="sub" id="tab_home_sub"></div>
@@ -235,6 +239,9 @@
                     <li class="text">{com_loading}</li>
                 </ul>
             </div>
+        </div>
+        <div id="tab_docs">
+            <webview class="tab_web" id="tab_docs_web"></webview>
         </div>
         <div id="tab_update">
             <div class="header text">{hub_update_title}</div>

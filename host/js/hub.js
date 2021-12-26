@@ -49,9 +49,17 @@ var store = {
 
 com.init(() => {
     hub_switch("home");
+    var wikilang;
+    if (lang.cur() == "zh-cn") {
+        wikilang = "zh";
+    } else {
+        wikilang = "en";
+    }
+    com.selector("#tab_docs_web").src = "https://docs.flysoft.tk/pe/#/" + wikilang + "/";
     hub_version_load(true);
     hub_search();
     setInterval(hub_search, 5000);
+    setInterval(hub_version_load, 10000);
     remote.getCurrentWindow().hookWindowMessage(0x0219, hub_search);
 });
 
@@ -113,10 +121,7 @@ function hub_search() {
                 } else {
                     version.latestusb = version.api.pe.latest == version.usb;
                 }
-            } catch (e) {
-                com.warn("Version information not found. Refreshing version information...");
-
-            }
+            } catch (e) {}
             hub_store_event();
             break;
         }

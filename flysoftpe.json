@@ -5,7 +5,7 @@
         "sta": "http://flystatistics.gzs.vin/api/?op=add&key=flysoftkey&item=flysoftpe"
     },
     "hub": {
-        "latest": "7.2",
+        "latest": "7.3",
         "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=hub_asar"
     },
     "pe": {
@@ -28,30 +28,10 @@
                     "link": "https://api.gzs.vin/api/flysoftpe/getDL/FlysoftPE.iso",
                     "link_beta": "https://api.gzs.vin/api/flysoftpe/getDL/FlysoftPE.iso"
                 },
-                "liteqwq": {
-                    "name": "LiteQwQ (B站UID:389874232, 未更新)",
-                    "link": "https://liteqwq.top/FlysoftPE/FlysoftPE.iso",
-                    "link_beta": "https://liteqwq.top/FlysoftPE/FlysoftPE.iso"
-                },
-                "moecloud": {
-                    "name": "萌云 (世纪互联, 推荐, 未更新)",
-                    "link": "https://moecloud.cn/api/v3/source/8Q6TZSeX8Q9TpF3dgNa0x0f0-fkd65KbOhdsGtc9M40=:0/587396/FlysoftPE_5.0Stable.iso",
-                    "link_beta": "https://moecloud.cn/api/v3/source/8Q6TZSeX8Q9TpF3dgNa0x0f0-fkd65KbOhdsGtc9M40=:0/587396/FlysoftPE_5.0Stable.iso"
-                },
-                "andi": {
-                    "name": "安迪云盘 (未更新)",
-                    "link": "https://pan.adycloud.com/api/v3/file/source/6380/FlysoftPE_5.0Stable.iso?sign=INgeED3wD_eOCeiJYoV6Gr9A2er7oSS9aoK3PEhVF44%3D%3A0",
-                    "link_beta": "https://pan.adycloud.com/api/v3/file/source/6380/FlysoftPE_5.0Stable.iso?sign=INgeED3wD_eOCeiJYoV6Gr9A2er7oSS9aoK3PEhVF44%3D%3A0"
-                },
-                "quack": {
-                    "name": "香港节点 (未更新)",
-                    "link": "https://quackcloud.xyz/下载/PEISO/FlysoftPE/FlysoftPE.iso",
-                    "link_beta": "https://quackcloud.xyz/下载/PEISO/FlysoftPE/FlysoftPE.iso"
-                },
-                "up": {
-                    "name": "官方 (又拍云, 不可用)",
-                    "link": "https://www.crabapi.cn/api/v5/flysoftpe/dl.php?source=upyun&channel=stable",
-                    "link_beta": "https://www.crabapi.cn/api/v5/flysoftpe/dl.php?source=upyun&channel=beta"
+                "willage666": {
+                    "name": "williage666",
+                    "link": "http://mc.i7xl.cn:30016/FlysoftPE.iso",
+                    "link_beta": "http://mc.i7xl.cn:30016/FlysoftPE.iso"
                 },
                 "flysoftod": {
                     "name": "官方源 (OneDrive)",
@@ -62,8 +42,8 @@
             "en-us": {
                 "flysoft": {
                     "name": "Official Source (OneDrive)",
-                    "link": "https://hiflysoft-my.sharepoint.com/:u:/g/personal/flysoft_hiflysoft_onmicrosoft_com/EYdkYCootDlKlvG-HyGqmM4BruhDK5OlXSs2x2_SCmhQQQ?download=1",
-                    "link_beta": "https://hiflysoft-my.sharepoint.com/:u:/g/personal/flysoft_hiflysoft_onmicrosoft_com/EYdkYCootDlKlvG-HyGqmM4BruhDK5OlXSs2x2_SCmhQQQ?download=1"
+                    "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=pe",
+                    "link_beta": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=pe"
                 }
             }
         }

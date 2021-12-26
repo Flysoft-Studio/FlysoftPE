@@ -159,7 +159,8 @@ app.on("ready", function () {
                 nodeIntegration: true,
                 contextIsolation: false,
                 enableRemoteModule: true,
-                nodeIntegrationInWorker: true
+                nodeIntegrationInWorker: true,
+                webviewTag: true
             }
         }, "file://" + __dirname + "/hub.html", () => {
             try {

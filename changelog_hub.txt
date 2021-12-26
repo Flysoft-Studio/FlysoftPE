@@ -1,7 +1,10 @@
 FlysoftPE Hub 更新日志 (Changelog)
 
+说明:
+    标 "*" 的项目为重要更新内容
+
 v1.0 Beta 2021-08-22:
-FlysoftPE Hub 的第一个版本
+* FlysoftPE Hub 的第一个版本
 
 v2.0 Beta 2021-08-25:
 新增:
@@ -39,7 +42,7 @@ v3.1 Stable 2021-08-28:
 
 v3.2 Stable 2021-09-04:
 新增:
-    新增一个小彩蛋
+    * 新增一个小彩蛋
 
 修复:
     修复可能无法检查到更新和版本号错乱的问题
@@ -53,7 +56,7 @@ v3.3 Stable 2021-09-04:
 
 v3.4 Stable 2021-09-06:
 新增:
-    新增 FlysoftPE Insider (Beta, Stable)
+    * 新增 FlysoftPE Insider (Beta, Stable)
 
 v3.5 Stable 2021-09-06:
 修复:
@@ -62,9 +65,9 @@ v3.5 Stable 2021-09-06:
 
 v4.0 Beta 2021-09-20:
 新增:
-    新增 FlysoftPE Store, 下载插件更简单
-    新版界面已经上线
-    FlysoftPE Store 上架第一批插件, 让 FlysoftPE 功能更强大
+    * 新增 FlysoftPE Store, 下载插件更简单
+    * 新版界面已经上线
+    * FlysoftPE Store 上架第一批插件, 让 FlysoftPE 功能更强大
     在主页新增显示版本功能 (最新版, 当前版本)
     在 FlysoftPE Insider 内测码错误时会给出提示
     在选择下载源时给出取消选项
@@ -84,7 +87,7 @@ v4.0 Beta 2021-09-20:
 
 v4.1 Stable 2021-09-21:
 新增:
-    商店界面在加载, 出错或没有任何项目时会显示一只猫, By Flysoft
+    * 商店界面在加载, 出错或没有任何项目时会显示一只猫, By Flysoft
     写入向导写入 Ventoy 时支持取消
     获取版本出错时会自动重新获取
 
@@ -108,7 +111,7 @@ v4.3 Stable 2021-09-21:
 
 v4.4 Stable 2021-09-21
 新增:
-    新增全新的列表按钮, 样式更美观
+    * 新增全新的列表按钮, 样式更美观
     商店内的库和已安装内的列表已换为按名称排序
 
 修复:
@@ -120,10 +123,10 @@ v4.4 Stable 2021-09-21
 
 v5.0 Beta 2021-10-02:
 新增:
-    新增手动导入 FlysoftPE 镜像功能, 可导入本地 FlysoftPE 镜像 (或基于 FlysoftPE 制作的第三方镜像)
-    支持自定义 PE 名称
-    亮色模式下背景变成彩色
-    主界面右下角增加炫彩 Powered by Flysoft 字样
+    * 新增手动导入 FlysoftPE 镜像功能, 可导入本地 FlysoftPE 镜像 (或基于 FlysoftPE 制作的第三方镜像)
+    * 支持自定义 PE 名称
+    * 亮色模式下背景变成彩色
+    * 主界面右下角增加炫彩 Powered by Flysoft 字样
 
 修复:
     修复写入向导在 Ventoy U 盘判定上的严重逻辑错误
@@ -146,7 +149,7 @@ v5.1 Stable 2021-10-02:
 
 v5.2 Stable 2021-10-02:
 新增:
-    新增使用次数统计功能
+    新增使用次数统计
 
 改动:
     使用全新接口标准
@@ -173,7 +176,7 @@ v5.6 Stable 2021-10-17:
 
 v5.7 Stable 2021-11-14:
 新增:
-    新增 aria2, 用于更快下载 Hub 和镜像文件
+    * 新增 aria2, 用于更快下载 Hub 和镜像文件
 
 修复:
     修复了语言会加载两次的问题
@@ -185,7 +188,7 @@ v5.7 Stable 2021-11-14:
 
 v6.0 Stable 2021-11-14:
 新增:
-    新增 aria2, 用于更快商店里的插件
+    * 新增 aria2, 用于更快商店里的插件
 
 修复:
     修复了在下载 FlysoftPE 后再次下载时没有选择镜像源对话框的问题
@@ -195,7 +198,7 @@ v6.0 Stable 2021-11-14:
 改动:
     移除大量旧版下载代码
     在 Hub 退出时会自动关闭 aria2
-    aria2 程序名由 aria2c.exe 改为 aria2c_hub.exe 以方便区分
+    aria2 进程由 aria2c.exe 改为 aria2c_hub.exe 以方便区分
 
 v6.1 Stable 2021-11-14:
 修复:
@@ -218,7 +221,7 @@ v7.0 Stable 2021-12-25:
     * 修复热更新可能无法使用的问题
     彩蛋现在变得更容易触发了
     修复了标题不在正中间的问题
-    ...等等
+    修复其他若干问题
 
 v7.1 Stable 2021-12-25:
 修复:
@@ -229,3 +232,10 @@ v7.2 Stable 2021-12-25:
 修复:
     修复 FlysoftPE 版本号会使用 FlysoftPE Hub 的版本号的问题
     修复 FlysoftPE Hub 的版本号显示 undefined 的问题
+
+v7.3 Stable 2021-12-26:
+新增:
+    * 新增 FlysoftPE 文档查看器
+
+修复:
+    修复在断网状态下打开 Hub, Hub 需重启才能联网的问题 
