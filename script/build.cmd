@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=3.0
+set TOOL_VER=3.1
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release

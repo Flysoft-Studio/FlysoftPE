@@ -1,6 +1,6 @@
 @echo off
 cd /d "%~dp0"
-path=%path%;%cd%;%cd%/tool;%cd%/script
+path=%cd%;%cd%/tool;%cd%/script;%path%
 
 :uac_check
 if "%1" equ "main" goto cmd_start
