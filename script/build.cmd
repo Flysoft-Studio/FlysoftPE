@@ -402,6 +402,7 @@ for /f "tokens=*" %%i in ('dir /ad /b "%PATH_ISO%\Plans"') do (
         7z x "%PATH_STORE%\%%j.zip" -o"%PATH_ISO%\Plans\%%i\plugins\%%j\" -y
     )
 )
+goto:eof
 
 :iso_pack
 call:log "Packing ISO..."
