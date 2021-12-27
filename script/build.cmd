@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=2.0
+set TOOL_VER=3.0
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release
@@ -31,6 +31,7 @@ set TOOL_ARG_CORE_HIVE_LOAD=core_hive_load
 set TOOL_ARG_CORE_HIVE_UNLOAD=core_hive_unload
 set TOOL_ARG_CORE_PACK=core_pack
 set TOOL_ARG_ISO_CREATE=iso_create
+set TOOL_ARG_ISO_PLAN=iso_plan
 set TOOL_ARG_ISO_PACK=iso_pack
 set TOOL_ARG_PLUG_EXTRACT=plug_extract
 set TOOL_ARG_CONF=conf
@@ -97,14 +98,13 @@ echo core_hive_load - Load registry hive
 echo core_hive_unload - Unload registry hive
 echo core_pack - Pack system core
 echo iso_create - Create ISO boot files
+echo iso_plan - Copy plans
 echo iso_pack - Generate final ISO file
 echo.
 echo Plugins:
 echo plug_extract - Extract files and registry
 echo.
 echo Tools:
-echo pecmd.ini - Edit pecmd.ini
-echo penetwork.ini - Edit penetwork.ini
 echo conf - Change config
 echo sort - Sort file list
 echo debug - Debug a plugin
@@ -223,7 +223,7 @@ call:log "Building UIHost..."
 cd /d "%PATH_HOST%"
 call npm run pack
 cd /d "%~dp0.."
-xcopy "%PATH_HOST%\dist\win-unpacked\*.*" "%PATH_RES_ISO%\FlysoftPE\host\" /y /e
+xcopy "%PATH_HOST%\dist\win-unpacked\*.*" "%PATH_ISO%\FlysoftPE\host\" /y /e
 goto:eof
 
 :plug_extract
@@ -390,15 +390,18 @@ del /f "%BCD_EFI%.log1"
 del /f "%BCD_EFI%.log2"
 xcopy "%PATH_RES_ISO%\*.*" "%PATH_ISO%\" /y /e
 if "%MODE_RELEASE%" equ "true" (
-    xcopy "%PATH_RES_ISO_R%\*.*" "%PATH_ISO%" /y /e
-    xcopy "%PATH_RES_COM%\Plans\*.*" "%PATH_ISO%\Plans\" /y /e
-    for /f "tokens=*" %%i in ('dir /ad /b "%PATH_ISO%\Plans"') do (
-        for /f "tokens=*" %%j in (%PATH_ISO%\Plans\%%i\plugins\Plugins.txt) do (
-            7z x "%PATH_STORE%\%%j.zip" -o"%PATH_ISO%\Plans\%%i\plugins\%%j\" -y
-        )
-    )
+    call:iso_plan
 )
 goto:eof
+
+:iso_plan
+xcopy "%PATH_RES_ISO_R%\*.*" "%PATH_ISO%" /y /e
+xcopy "%PATH_RES_COM%\Plans\*.*" "%PATH_ISO%\Plans\" /y /e
+for /f "tokens=*" %%i in ('dir /ad /b "%PATH_ISO%\Plans"') do (
+    for /f "tokens=*" %%j in (%PATH_ISO%\Plans\%%i\plugins\Plugins.txt) do (
+        7z x "%PATH_STORE%\%%j.zip" -o"%PATH_ISO%\Plans\%%i\plugins\%%j\" -y
+    )
+)
 
 :iso_pack
 call:log "Packing ISO..."
