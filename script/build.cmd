@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=3.1
+set TOOL_VER=3.2
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release
@@ -348,6 +348,7 @@ goto:eof
 call:log "Creating ISO..."
 if not exist "%PATH_ISO%\boot" mkdir "%PATH_ISO%\boot"
 if not exist "%PATH_ISO%\efi" mkdir "%PATH_ISO%\efi"
+del "%PATH_ISO%\empty" /f /s /q
 xcopy "%PATH_ISODIR%\boot\*.*" "%PATH_ISO%\boot\" /y /e
 xcopy "%PATH_ISODIR%\efi\*.*" "%PATH_ISO%\efi\" /y /e
 copy "%PATH_ISODIR%\bootmgr" "%PATH_ISO%\bootmgr" /y
