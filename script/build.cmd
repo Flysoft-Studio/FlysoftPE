@@ -341,7 +341,7 @@ if "%MODE_RELEASE%" equ "false" (
     wimlib-imagex capture "%PATH_SYS%" "%PATH_WIMFILE%" "FlysoftPE" "FlysoftPE" --boot --flags=9 --compress=LZX --verbose
 )
 if not exist "%PATH_ISO%\sources" mkdir "%PATH_ISO%\sources"
-move /y "%PATH_WIMFILE%" "%PATH_ISO%\Sources\"
+move /y "%PATH_WIMFILE%" "%PATH_ISO%\sources\"
 goto:eof
 
 :iso_create
