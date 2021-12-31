@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=5.0
+set TOOL_VER=5.1
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release
@@ -129,6 +129,7 @@ exit /b 0
 del /f /q /s "%PATH_HOST_R%\app.asar"
 del /f /q /s "%PATH_HOST_R%\tool.zip"
 del /f /q /s "%PATH_HOST_R%\FlysoftPE Hub.zip"
+goto:eof
 
 :hub_make
 call:hub_cleanup
