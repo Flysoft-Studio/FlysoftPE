@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=5.1
+set TOOL_VER=5.2
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release
@@ -132,7 +132,7 @@ del /f /q /s "%PATH_HOST_R%\FlysoftPE Hub.zip"
 goto:eof
 
 :hub_make
-call:hub_cleanup
+if "%NOMAKEHUB%" equ "true" goto:eof
 call:get_conf ENV_NPM no
 set NPM=%RETURN%
 cd /d "%PATH_HOST%"
