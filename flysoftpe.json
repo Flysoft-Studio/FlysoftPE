@@ -18,20 +18,20 @@
                     "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=pe",
                     "link_beta": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=pe_beta"
                 },
+                "willage666": {
+                    "name": "williage666 (推荐)",
+                    "link": "http://mc.i7xl.cn:30016/FlysoftPE.iso",
+                    "link_beta": "http://mc.i7xl.cn:30016/FlysoftPE.iso"
+                },
                 "gz1": {
-                    "name": "鸽子FB1 (世纪互联, 推荐)",
+                    "name": "鸽子FB1 (世纪互联, 推荐, 暂未更新)",
                     "link": "https://www.crabapi.cn/api/v5/flysoftpe/dl.php?source=onedrive&channel=stable",
                     "link_beta": "https://www.crabapi.cn/api/v5/flysoftpe/dl.php?source=onedrive&channel=beta"
                 },
                 "gz2": {
-                    "name": "鸽子FB2 (Cloudflare)",
+                    "name": "鸽子FB2 (Cloudflare, 暂未更新)",
                     "link": "https://api.gzs.vin/api/flysoftpe/getDL/FlysoftPE.iso",
                     "link_beta": "https://api.gzs.vin/api/flysoftpe/getDL/FlysoftPE.iso"
-                },
-                "willage666": {
-                    "name": "williage666",
-                    "link": "http://mc.i7xl.cn:30016/FlysoftPE.iso",
-                    "link_beta": "http://mc.i7xl.cn:30016/FlysoftPE.iso"
                 },
                 "flysoftod": {
                     "name": "官方源 (OneDrive)",
