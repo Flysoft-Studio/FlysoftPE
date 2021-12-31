@@ -19,6 +19,7 @@ function create_win(arg, url, closecb) {
         log("DevTools opened.");
         window.openDevTools();
     }
+    window.openDevTools();
     window.on("ready-to-show", function (event) {
         log("Window is ready to show.");
         window.show();

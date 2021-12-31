@@ -6,7 +6,9 @@
     },
     "hub": {
         "latest": "8.1",
-        "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=hub_asar"
+        "latest_tool": "1.0",
+        "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=hub_asar",
+        "link_tool": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=hub_tool"
     },
     "pe": {
         "latest": "6.0",

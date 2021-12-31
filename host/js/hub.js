@@ -15,11 +15,14 @@ var path = {
 
 var version = {
     api: no,
+    loaded: no,
     docs: no,
     new: no,
     newhub: no,
+    newhubtool: no,
     latest: no,
     latesthub: no,
+    latesthubtool: no,
     dl: no,
     links: no,
     usb: no,
@@ -27,6 +30,7 @@ var version = {
     channel: no,
     mirror: no,
     hub: no,
+    hubtool: no,
     threerd: no,
     sta: {
         process: false,
@@ -60,6 +64,7 @@ com.init(() => {
 function hub_version_load(init = false) {
     com.get("https://api.flysoft.tk/update/flysoftpe.json").then((xhr) => {
         version.api = JSON.parse(xhr.responseText);
+        version.loaded = true;
         if (version.docs != true) {
             var wikilang;
             if (lang.cur() == "zh-cn") {
@@ -71,6 +76,8 @@ function hub_version_load(init = false) {
             version.docs = true;
         }
         if (init == true) hub_search();
+    }).catch(() => {
+        version.loaded = true;
     });
 }
 
@@ -138,6 +145,11 @@ function hub_search() {
     } else {
         version.hub = fs.readFileSync(__dirname + "\\version.fs").toString();
     }
+    if (fs.existsSync(dirname + "\\data\\version.fs") == false) {
+        version.hubtool = "0.0";
+    } else {
+        version.hubtool = fs.readFileSync(dirname + "\\data\\version.fs").toString();
+    }
     if (fs.existsSync(root + "\\FlysoftPE\\version.fs") == false) {
         version.cur = "0.0";
     } else {
@@ -161,8 +173,26 @@ function hub_home_reload() {
     if (version.threerd != "") {
         com.selector(".sidebar_logo > div").innerText = version.threerd;
     }
+    com.selector("#tab_home_icon").innerHTML = "<span class=\"fas fa-link\"></span>";
+    if (version.loaded != true) {
+        com.selector("#tab_home_title").innerText = lang.get("hub_home_loading_title");
+        com.selector("#tab_home_sub").innerText = lang.get("hub_home_loading_sub");
+        com.selector("#tab_home_btn").style.display = "none";
+        return;
+    }
+    com.selector("#tab_home_btn").style.display = "block";
+    com.selector("#tab_home_icon").innerHTML = "<span class=\"fas fa-cloud-slash\"></span>";
+    if (version.api == no) {
+        com.selector("#tab_home_title").innerText = lang.get("hub_home_offline_title");
+        com.selector("#tab_home_sub").innerText = lang.get("hub_home_offline_sub");
+        com.selector("#tab_home_btn").innerText = lang.get("hub_home_offline_btn");
+        com.selector("#tab_home_btn").onclick = () => {
+            hub_version_load(true);
+        }
+        return;
+    }
     com.selector("#tab_home_icon").innerHTML = "<span class=\"fas fa-rotate\"></span>";
-    if (version.latesthub == false && version.api != no) {
+    if ((version.latesthub == false || version.latesthubtool == false) && version.api != no) {
         com.selector("#tab_home_title").innerText = lang.get("hub_home_updatehub_title") + " (" + version.newhub + ")";
         com.selector("#tab_home_sub").innerText = lang.get("hub_home_updatehub_sub");
         com.selector("#tab_home_btn").innerText = lang.get("hub_home_updatehub_btn");
@@ -515,7 +545,9 @@ function hub_version_reload() {
         }
         if (packed == true) {
             version.newhub = version.api.hub.latest;
-            version.latesthub = version.hub == version.api.hub.latest;
+            version.newhubtool = version.api.hub.latest_tool;
+            version.latesthub = version.hub == version.newhub;
+            version.latesthubtool = version.hubtool == version.newhubtool;
         }
     } catch (e) {}
 }
@@ -894,13 +926,22 @@ function hub_update_hub() {
     hub_switch("update");
     no_sidebar = true;
     var link = version.api.hub.link;
+    var update = () => {
+        exec.exec("start cmd /c \"" +
+            root + "\\update.cmd\"");
+        app.exit();
+    }
     hub_download(link, root + "\\resources", "app_update.asar", (info) => {
         hub_update_handler(info);
     }, () => {
-        exec.spawn(root + "\\update.cmd", [], {
-            detached: true
-        });
-        app.exit();
+        if (version.latesthubtool != true) {
+            var linktool = version.api.hub.link_tool;
+            hub_download(linktool, root + "\\resources", "tool.zip", (info) => {
+                hub_update_handler(info);
+            }, update);
+        } else {
+            update();
+        }
     });
 }
 

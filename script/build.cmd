@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=4.0
+set TOOL_VER=5.0
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release
@@ -34,6 +34,10 @@ set TOOL_ARG_ISO_CREATE=iso_create
 set TOOL_ARG_ISO_PLAN=iso_plan
 set TOOL_ARG_ISO_PACK=iso_pack
 set TOOL_ARG_PLUG_EXTRACT=plug_extract
+set TOOL_ARG_HUB_CLEANUP=hub_cleanup
+set TOOL_ARG_HUB_ASAR=hub_asar
+set TOOL_ARG_HUB_TOOL=hub_tool
+set TOOL_ARG_HUB_FULL=hub_full
 set TOOL_ARG_CONF=conf
 set TOOL_ARG_ENV=env
 set PATH_TEMP=.\temp
@@ -42,6 +46,8 @@ set PATH_SYS=.\system
 set PATH_ISO=.\iso
 set PATH_CONFIG=.\config
 set PATH_HOST=.\host
+set PATH_HOST_DIST=%PATH_HOST%\dist\win-unpacked
+set PATH_HOST_R=%PATH_HOST%\release
 set PATH_PROJECT=.\project
 set PATH_store=.\store
 set PATH_RES_SYS=.\resources\system
@@ -104,6 +110,12 @@ echo.
 echo Plugins:
 echo plug_extract - Extract files and registry
 echo.
+echo Hub:
+echo hub_cleanup - Cleanup Hub files
+echo hub_asar - Create Asar Update Package
+echo hub_tool - Create Tool Update Package
+echo hub_full - Create Full Update Package
+echo.
 echo Tools:
 echo conf - Change config
 echo sort - Sort file list
@@ -112,6 +124,46 @@ goto:eof
 
 :env
 exit /b 0
+
+:hub_cleanup
+del /f /q /s "%PATH_HOST_R%\app.asar"
+del /f /q /s "%PATH_HOST_R%\tool.zip"
+del /f /q /s "%PATH_HOST_R%\FlysoftPE Hub.zip"
+
+:hub_make
+call:hub_cleanup
+call:get_conf ENV_NPM no
+set NPM=%RETURN%
+cd /d "%PATH_HOST%"
+if "%NPM%" neq "no" goto:hub_make_skip
+call:log "Testing CNPM..."
+call cnpm 1>nul 2>nul
+set NPM=cnpm
+if "%errorlevel%" neq "0" (
+    call:log "Testing NPM..."
+    set NPM=npm
+)
+:hub_make_skip
+call %NPM% install
+call %NPM% run pack
+cd /d "%PATH_CUR%"
+goto:eof
+
+:hub_asar
+call:hub_make
+copy /y "%PATH_HOST_DIST%\resources\app.asar" "%PATH_HOST_R%\app.asar"
+goto:eof
+
+:hub_tool
+call:hub_make
+del /f /q /s "%PATH_HOST_DIST%\resources\app.asar"
+7z a "%PATH_HOST_R%\tool.zip" "%PATH_HOST_DIST%\resources\*"
+goto:eof
+
+:hub_full
+call:hub_make
+7z a "%PATH_HOST_R%\FlysoftPE Hub.zip" "%PATH_HOST_DIST%\*"
+goto:eof
 
 :conf
 set /p KEY=Key: 
@@ -220,17 +272,7 @@ goto:eof
 
 :uihost
 call:log "Building UIHost..."
-cd /d "%PATH_HOST%"
-call:log "Testing CNPM..."
-call cnpm 1>nul 2>nul
-set NPM=cnpm
-if "%errorlevel%" neq "0" (
-    call:log "Testing NPM..."
-    set NPM=npm
-)
-call %NPM% install
-call %NPM% run pack
-cd /d "%~dp0.."
+call:hub_make
 xcopy "%PATH_HOST%\dist\win-unpacked\*.*" "%PATH_ISO%\FlysoftPE\host\" /y /e
 goto:eof
 

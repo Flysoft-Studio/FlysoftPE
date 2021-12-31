@@ -16,6 +16,18 @@
       name: 'FlysoftPE Docs Beta',
       repo: '',
       loadSidebar: true,
+      search: {
+        placeholder: {
+          '/zh/': '搜索',
+          '/': 'Type to search'
+        },
+        noData: {
+          '/zh/': '找不到结果',
+          '/': 'No Results'
+        },
+        depth: 6,
+        hideOtherSidebarContent: true,
+      }
     }
   </script>
   <script src="./js/docsify.min.js"></script>
@@ -24,6 +36,7 @@
   <script src="./js/pagination.min.js"></script>
   <script src="./js/zoom.min.js"></script>
   <script src="./js/countable.js"></script>
+  <script src="./js/fixes.js"></script>
 </body>
 
 </html>

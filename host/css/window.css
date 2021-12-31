@@ -273,6 +273,7 @@ input[type="text"]:focus {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    padding-left: 10px;
 }
 
 #pop_button>div:nth-child(1) {
