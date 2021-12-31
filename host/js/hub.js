@@ -14,7 +14,7 @@ var path = {
 };
 
 var version = {
-    api: {},
+    api: no,
     docs: no,
     new: no,
     newhub: no,
@@ -162,7 +162,7 @@ function hub_home_reload() {
         com.selector(".sidebar_logo > div").innerText = version.threerd;
     }
     com.selector("#tab_home_icon").innerHTML = "<span class=\"fas fa-rotate\"></span>";
-    if (version.latesthub == false) {
+    if (version.latesthub == false && version.api != no) {
         com.selector("#tab_home_title").innerText = lang.get("hub_home_updatehub_title") + " (" + version.newhub + ")";
         com.selector("#tab_home_sub").innerText = lang.get("hub_home_updatehub_sub");
         com.selector("#tab_home_btn").innerText = lang.get("hub_home_updatehub_btn");
@@ -172,7 +172,7 @@ function hub_home_reload() {
         return;
     }
     com.selector("#tab_home_icon").innerHTML = "<span class=\"fas fa-download\"></span>";
-    if (version.dl == false && pe == false) {
+    if (version.dl == false && pe == false && version.api != no) {
         com.selector("#tab_home_title").innerText = lang.get("hub_home_no_title") + " (" + version.new + ")";
         com.selector("#tab_home_sub").innerText = lang.get("hub_home_no_sub");
         com.selector("#tab_home_btn").innerText = lang.get("hub_home_no_btn");
@@ -181,7 +181,7 @@ function hub_home_reload() {
         }
         return;
     }
-    if (version.latest == false && version.dl == true) {
+    if (version.latest == false && version.dl == true && version.api != no) {
         com.selector("#tab_home_title").innerText = lang.get("hub_home_update_title") + " (" + version.new + ")";
         com.selector("#tab_home_sub").innerText = lang.get("hub_home_update_sub");
         com.selector("#tab_home_btn").innerText = lang.get("hub_home_update_btn");
@@ -201,7 +201,7 @@ function hub_home_reload() {
         return;
     }
     com.selector("#tab_home_icon").innerHTML = "<span class=\"fas fa-rotate\"></span>";
-    if (version.latestusb == false && version.dl == true) {
+    if (version.latestusb == false && version.dl == true && version.api != no) {
         com.selector("#tab_home_title").innerText = lang.get("hub_home_updateusb_title") + " (" + version.cur + ")";
         com.selector("#tab_home_sub").innerText = lang.get("hub_home_updateusb_sub");
         com.selector("#tab_home_btn").innerText = lang.get("hub_home_updateusb_btn");

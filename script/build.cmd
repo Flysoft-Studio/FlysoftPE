@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=3.2
+set TOOL_VER=4.0
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release
@@ -221,7 +221,15 @@ goto:eof
 :uihost
 call:log "Building UIHost..."
 cd /d "%PATH_HOST%"
-call npm run pack
+call:log "Testing CNPM..."
+call cnpm 1>nul 2>nul
+set NPM=cnpm
+if "%errorlevel%" neq "0" (
+    call:log "Testing NPM..."
+    set NPM=npm
+)
+call %NPM% install
+call %NPM% run pack
 cd /d "%~dp0.."
 xcopy "%PATH_HOST%\dist\win-unpacked\*.*" "%PATH_ISO%\FlysoftPE\host\" /y /e
 goto:eof
@@ -348,7 +356,6 @@ goto:eof
 call:log "Creating ISO..."
 if not exist "%PATH_ISO%\boot" mkdir "%PATH_ISO%\boot"
 if not exist "%PATH_ISO%\efi" mkdir "%PATH_ISO%\efi"
-del "%PATH_ISO%\empty" /f /s /q
 xcopy "%PATH_ISODIR%\boot\*.*" "%PATH_ISO%\boot\" /y /e
 xcopy "%PATH_ISODIR%\efi\*.*" "%PATH_ISO%\efi\" /y /e
 copy "%PATH_ISODIR%\bootmgr" "%PATH_ISO%\bootmgr" /y
@@ -393,6 +400,7 @@ xcopy "%PATH_RES_ISO%\*.*" "%PATH_ISO%\" /y /e
 if "%MODE_RELEASE%" equ "true" (
     call:iso_plan
 )
+del "%PATH_ISO%\empty" /f /s /q
 goto:eof
 
 :iso_plan
