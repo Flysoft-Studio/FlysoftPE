@@ -55,12 +55,10 @@ var store = {
 
 com.init(() => {
     version.firstrun = fs.existsSync(root + "\\firstrun.fs");
-    if (version.firstrun == true) {
+    if (version.firstrun == true && packed == true) {
         fs.rmSync(root + "\\firstrun.fs");
     }
-    if (packed == false) {
-        com.selector(".color").classList.remove("color");
-    }
+    hub_conf_pfm_reload();
     hub_switch("home");
     hub_version_load(true);
     hub_search();
@@ -255,6 +253,50 @@ function hub_home_reload() {
     com.selector("#tab_home_btn").onclick = () => {
         hub_switch("store");
     }
+}
+
+function hub_conf_about_reload() {
+    com.selector("#hub_conf_about_version").innerText = version.hub;
+    com.selector("#hub_conf_about_os").innerText = os.type() + " " + os.arch() + " " + os.release();
+    var versions = process.versions;
+    com.selector("#hub_conf_about_electron").innerText = versions.electron;
+    com.selector("#hub_conf_about_chromium").innerText = versions.chrome;
+    com.selector("#hub_conf_about_v8").innerText = versions.v8;
+    com.selector("#hub_conf_about_node").innerText = versions.node;
+}
+
+function hub_conf_pfm_reload() {
+    if (storage.get("pfm_color_hub", true) == false) {
+        com.selector("#hub_conf_pfm_color_hub").checked = false;
+        com.selector(".sidebar_powered").classList.remove("color");
+    }
+    if (storage.get("pfm_blur_pop", true) == false) {
+        com.selector("#hub_conf_pfm_blur_pop").checked = false;
+        com.selector("#mask").style.backdropFilter = "none";
+    }
+    if (storage.get("pfm_blur_sidebar", true) == false) {
+        com.selector("#hub_conf_pfm_blur_sidebar").checked = false;
+        com.selector("#sidebar").style.backdropFilter = "none";
+    }
+    if (storage.get("pfm_blur_titlebar", true) == false) {
+        com.selector("#hub_conf_pfm_blur_titlebar").checked = false;
+        com.selector(".title_btn").style.backdropFilter = "none";
+    }
+    if (storage.get("pfm_animate_hub", true) == false) {
+        com.selector("#hub_conf_pfm_animate_hub").checked = false;
+        var style = com.create("style");
+        style.type = "text/css";
+        style.innerText = "*{transition:none!important;}";
+        com.selector("head").appendChild(style);
+    }
+}
+
+function hub_conf_pfm_apply() {
+    storage.set("pfm_color_hub", com.selector("#hub_conf_pfm_color_hub").checked);
+    storage.set("pfm_blur_pop", com.selector("#hub_conf_pfm_blur_pop").checked);
+    storage.set("pfm_blur_titlebar", com.selector("#hub_conf_pfm_blur_titlebar").checked);
+    storage.set("pfm_blur_sidebar", com.selector("#hub_conf_pfm_blur_sidebar").checked);
+    storage.set("pfm_animate_hub", com.selector("#hub_conf_pfm_animate_hub").checked);
 }
 
 function hub_restartshell() {
@@ -453,7 +495,7 @@ function hub_set_disp_apply() {
 }
 
 function hub_set_sound_reload() {
-    var config = "0";
+    var config = "32768";
     if (fs.existsSync(path.config + "\\volume.bin") == true) {
         config = fs.readFileSync(path.config + "\\volume.bin").toString();
     }
@@ -1048,16 +1090,21 @@ function hub_switch(tab) {
         hub_store_reload();
     }
     if (tab == "settings") {
+        hub_conf_pfm_reload();
+        hub_conf_about_reload();
         if (installed == false) {
-            hub_showinsert();
-            return;
+            com.selector("#hub_set_nodisk").style.display = "block";
+            com.selector("#hub_set_pe").style.display = "none";
+        } else {
+            com.selector("#hub_set_nodisk").style.display = "none";
+            com.selector("#hub_set_pe").style.display = "block";
+            hub_set_wp_reload();
+            hub_set_app_reload();
+            hub_set_disp_reload();
+            hub_set_sound_reload();
+            hub_set_env_reload();
+            hub_set_insider_reload();
         }
-        hub_set_wp_reload();
-        hub_set_app_reload();
-        hub_set_disp_reload();
-        hub_set_sound_reload();
-        hub_set_env_reload();
-        hub_set_insider_reload();
     }
     if (tab == "drivers") {
         if (installed == false) {

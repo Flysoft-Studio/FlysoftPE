@@ -98,7 +98,8 @@ body {
     font-size: 16px;
 }
 
-.group>input[type="radio"] {
+.group>input[type="radio"],
+.group>input[type="checkbox"] {
     width: 16px;
     height: 16px;
     position: relative;
@@ -106,7 +107,8 @@ body {
     outline: none;
 }
 
-.group>input[type="radio"]::after {
+.group>input[type="radio"]::after,
+.group>input[type="checkbox"]::after {
     content: "";
     position: absolute;
     top: 0;
@@ -118,7 +120,12 @@ body {
     border: rgb(230, 230, 230) 1px solid;
 }
 
-.group>input[type="radio"]:checked::before {
+.group>input[type="checkbox"]::after {
+    border-radius: 15%;
+}
+
+.group>input[type="radio"]:checked::before,
+.group>input[type="checkbox"]:checked::before {
     content: "";
     position: absolute;
     top: 3px;
@@ -128,6 +135,10 @@ body {
     border-radius: 100%;
     background-color: rgb(0, 117, 255);
     z-index: 1;
+}
+
+.group>input[type="checkbox"]:checked::before {
+    border-radius: 20%;
 }
 
 .group>input[type="range"] {
@@ -487,7 +498,7 @@ input[type="text"]:focus {
 }
 
 .sub {
-    margin-top: 8px;
+    padding-top: 12px;
     font-size: 20px;
 }
 
@@ -583,7 +594,7 @@ input[type="text"]:focus {
 
 .card_body {
     padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-right: 20px;
     padding-bottom: 20px;
     width: unset;
@@ -592,7 +603,7 @@ input[type="text"]:focus {
 .card_btn {
     width: 100%;
     text-align: right;
-    margin-top: 15px;
+    padding-top: 15px;
     display: flex;
     justify-content: flex-end;
     align-content: center;
@@ -686,12 +697,14 @@ input[type="text"]:focus {
         background-color: #202124;
     }
 
-    .group>input[type="radio"]::after {
+    .group>input[type="radio"]::after,
+    .group>input[type="checkbox"]::after {
         border: #7c7c7c 1px solid;
         background-color: #5e5e5e;
     }
 
-    .group>input[type="radio"]:checked::before {
+    .group>input[type="radio"]:checked::before,
+    .group>input[type="checkbox"]:checked::before {
         background-color: #ffffff;
     }
 

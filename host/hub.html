@@ -85,149 +85,238 @@
         </div>
         <div id="tab_settings">
             <div class="header text" id="tab_set_title">{hub_set_title}</div>
-            <div class="card">
-                <div class="card_title text">{hub_set_wp}</div>
-                <div class="card_body">
-                    <img id="tab_set_wp_img" class="img" />
-                    <div class="card_btn">
-                        <div class="button button_no text" onclick="hub_set_wp_export();">{com_export}</div>
-                        <div class="button text" onclick="hub_set_wp_mod();">{com_modify}</div>
+            <div id="hub_set_nodisk">
+                <label class="label text">{hub_set_nodisk}</label>
+            </div>
+            <div id="hub_set_pe">
+                <div class="card">
+                    <div class="card_title text">{hub_set_wp}</div>
+                    <div class="card_body">
+                        <img id="tab_set_wp_img" class="img" />
+                        <div class="card_btn">
+                            <div class="button button_no text" onclick="hub_set_wp_export();">{com_export}</div>
+                            <div class="button text" onclick="hub_set_wp_mod();">{com_modify}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="break"></div>
-            <div class="card">
-                <div class="card_title text">{hub_set_app}</div>
-                <div class="card_body">
-                    <div class="sub text">{hub_set_app_cmode}</div>
-                    <form>
-                        <div class="group">
-                            <label class="label text">{hub_set_app_cmode_theme}</label>
-                            <input type="radio" name="cmode" id="hub_set_app_cmode_theme" />
+                <div class="break"></div>
+                <div class="card">
+                    <div class="card_title text">{hub_set_app}</div>
+                    <div class="card_body">
+                        <div class="sub text">{hub_set_app_cmode}</div>
+                        <form>
+                            <div class="group">
+                                <label class="label text">{hub_set_app_cmode_theme}</label>
+                                <input type="radio" name="cmode" id="hub_set_app_cmode_theme" />
+                            </div>
+                            <div class="group">
+                                <label class="label text">{hub_set_app_cmode_light}</label>
+                                <input type="radio" name="cmode" id="hub_set_app_cmode_light" />
+                            </div>
+                            <div class="group">
+                                <label class="label text">{hub_set_app_cmode_dark}</label>
+                                <input type="radio" name="cmode" id="hub_set_app_cmode_dark" />
+                            </div>
+                        </form>
+                        <div class="sub text">{hub_set_app_taskbar}</div>
+                        <div class="break"></div>
+                        <div class="fa fa-sidebar-flip mid_icon"></div>
+                        <div class="card_btn">
+                            <div class="button button_no text" onclick="hub_set_app_taskbar_edit();">
+                                {hub_set_app_taskbar_edit}</div>
+                            <div class="button button_no text" onclick="hub_set_app_taskbar_remove();">
+                                {hub_set_app_taskbar_remove}</div>
+                            <div class="button text" onclick="hub_set_app_apply();">{com_apply}</div>
                         </div>
-                        <div class="group">
-                            <label class="label text">{hub_set_app_cmode_light}</label>
-                            <input type="radio" name="cmode" id="hub_set_app_cmode_light" />
-                        </div>
-                        <div class="group">
-                            <label class="label text">{hub_set_app_cmode_dark}</label>
-                            <input type="radio" name="cmode" id="hub_set_app_cmode_dark" />
-                        </div>
-                    </form>
-                    <div class="sub text">{hub_set_app_taskbar}</div>
-                    <div class="break"></div>
-                    <div class="fa fa-sidebar-flip mid_icon"></div>
-                    <div class="card_btn">
-                        <div class="button button_no text" onclick="hub_set_app_taskbar_edit();">
-                            {hub_set_app_taskbar_edit}</div>
-                        <div class="button button_no text" onclick="hub_set_app_taskbar_remove();">
-                            {hub_set_app_taskbar_remove}</div>
-                        <div class="button text" onclick="hub_set_app_apply();">{com_apply}</div>
                     </div>
                 </div>
-            </div>
-            <div class="break"></div>
-            <div class="card">
-                <div class="card_title text">{hub_set_disp}</div>
-                <div class="card_body">
-                    <div class="sub text">{hub_set_disp_bright}</div>
-                    <form>
-                        <div class="group">
-                            <input type="range" min="200" max="1000" step="1" id="hub_set_disp_bright_range" />
-                        </div>
-                    </form>
-                    <div class="sub text">{hub_set_disp_res}</div>
-                    <form>
-                        <div class="group">
-                            <label class="label text">{hub_set_disp_res_def}</label>
-                            <input type="radio" name="res" id="hub_set_disp_res_def" onclick="hub_set_disp_show();" />
-                        </div>
-                        <div class="group">
-                            <label class="label text">{hub_set_disp_res_other}</label>
-                            <input type="radio" name="res" id="hub_set_disp_res_other" onclick="hub_set_disp_show();" />
-                        </div>
-                        <div class="group">
-                            <div class="select" id="hub_set_disp_res_other_select">
-                                <select id="hub_set_disp_res_other_list">
-                                    <option>7680x4320</option>
-                                    <option>4096x2160</option>
-                                    <option>3840x2160</option>
-                                    <option>2560x1440</option>
-                                    <option>2560x1080</option>
-                                    <option>1920x1200</option>
-                                    <option>1920x1080</option>
-                                    <option>1680x1050</option>
-                                    <option>1600x1200</option>
-                                    <option>1440x900</option>
-                                    <option>1280x1024</option>
-                                    <option>1280x960</option>
-                                    <option>1280x800</option>
-                                    <option>1280x768</option>
-                                    <option>1280x720</option>
-                                    <option>1024x768</option>
-                                    <option>800x600</option>
-                                    <option>640x480</option>
-                                </select>
-                                <span id="hub_set_disp_res_other_title"></span>
-                                <div>
-                                    <div class="small_icon">
-                                        <span class="far fa-angle-down"></span>
+                <div class="break"></div>
+                <div class="card">
+                    <div class="card_title text">{hub_set_disp}</div>
+                    <div class="card_body">
+                        <div class="sub text">{hub_set_disp_bright}</div>
+                        <form>
+                            <div class="group">
+                                <input type="range" min="200" max="1000" step="1" id="hub_set_disp_bright_range" />
+                            </div>
+                        </form>
+                        <div class="sub text">{hub_set_disp_res}</div>
+                        <form>
+                            <div class="group">
+                                <label class="label text">{hub_set_disp_res_def}</label>
+                                <input type="radio" name="res" id="hub_set_disp_res_def"
+                                    onclick="hub_set_disp_show();" />
+                            </div>
+                            <div class="group">
+                                <label class="label text">{hub_set_disp_res_other}</label>
+                                <input type="radio" name="res" id="hub_set_disp_res_other"
+                                    onclick="hub_set_disp_show();" />
+                            </div>
+                            <div class="group">
+                                <div class="select" id="hub_set_disp_res_other_select">
+                                    <select id="hub_set_disp_res_other_list">
+                                        <option>7680x4320</option>
+                                        <option>4096x2160</option>
+                                        <option>3840x2160</option>
+                                        <option>2560x1440</option>
+                                        <option>2560x1080</option>
+                                        <option>1920x1200</option>
+                                        <option>1920x1080</option>
+                                        <option>1680x1050</option>
+                                        <option>1600x1200</option>
+                                        <option>1440x900</option>
+                                        <option>1280x1024</option>
+                                        <option>1280x960</option>
+                                        <option>1280x800</option>
+                                        <option>1280x768</option>
+                                        <option>1280x720</option>
+                                        <option>1024x768</option>
+                                        <option>800x600</option>
+                                        <option>640x480</option>
+                                    </select>
+                                    <span id="hub_set_disp_res_other_title"></span>
+                                    <div>
+                                        <div class="small_icon">
+                                            <span class="far fa-angle-down"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </form>
+                        <div class="card_btn">
+                            <div class="button text" onclick="hub_set_disp_apply();">{com_apply}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="break"></div>
+                <div class="card">
+                    <div class="card_title text">{hub_set_sound}</div>
+                    <div class="card_body">
+                        <div class="sub text">{hub_set_sound_vol}</div>
+                        <form>
+                            <div class="group">
+                                <input type="range" min="0" max="1000" step="1" id="hub_set_sound_vol_range"
+                                    onchange="hub_set_sound_apply();" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="break"></div>
+                <div class="card">
+                    <div class="card_title text">{hub_set_env}</div>
+                    <div class="card_body">
+                        <div class="sub text">{hub_set_env_mode}</div>
+                        <form>
+                            <div class="group">
+                                <label class="label text">{hub_set_env_mode_save}</label>
+                                <input type="radio" name="cmode" id="hub_set_env_mode_save" />
+                            </div>
+                            <div class="group">
+                                <label class="label text">{hub_set_env_mode_nosave}</label>
+                                <input type="radio" name="cmode" id="hub_set_env_mode_nosave" />
+                            </div>
+                        </form>
+                        <div class="card_btn">
+                            <div class="button text" onclick="hub_set_env_apply();">{com_apply}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="break"></div>
+                <div class="card">
+                    <div class="card_title text">{hub_set_insider}</div>
+                    <div class="card_body">
+                        <div class="sub text">{hub_set_insider_join}</div>
+                        <form>
+                            <div class="group">
+                                <input type="text" name="insider" id="hub_set_insider_join_code">
+                            </div>
+                        </form>
+                        <div class="card_btn">
+                            <div class="button text" onclick="hub_set_insider_join();" id="hub_set_insider_join_join">
+                                {com_join}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header text" id="tab_set_title">{hub_conf_title}</div>
+            <div id="hub_set_hub"></div>
+            <div class="card">
+                <div class="card_title text">{hub_conf_pfm}</div>
+                <div class="card_body">
+                    <div class="sub text">{hub_conf_pfm_color}</div>
+                    <form>
+                        <div class="group">
+                            <label class="label text">{hub_conf_pfm_color_hub}</label>
+                            <input type="checkbox" id="hub_conf_pfm_color_hub" checked="true" />
+                        </div>
+                    </form>
+                    <div class="sub text">{hub_conf_pfm_blur}</div>
+                    <form>
+                        <div class="group">
+                            <label class="label text">{hub_conf_pfm_blur_pop}</label>
+                            <input type="checkbox" id="hub_conf_pfm_blur_pop" checked="true" />
+                        </div>
+                        <div class="group">
+                            <label class="label text">{hub_conf_pfm_blur_titlebar}</label>
+                            <input type="checkbox" id="hub_conf_pfm_blur_titlebar" checked="true" />
+                        </div>
+                        <div class="group">
+                            <label class="label text">{hub_conf_pfm_blur_sidebar}</label>
+                            <input type="checkbox" id="hub_conf_pfm_blur_sidebar" checked="true" />
+                        </div>
+                    </form>
+                    <div class="sub text">{hub_conf_pfm_animate}</div>
+                    <form>
+                        <div class="group">
+                            <label class="label text">{hub_conf_pfm_animate_hub}</label>
+                            <input type="checkbox" id="hub_conf_pfm_animate_hub" checked="true" />
                         </div>
                     </form>
                     <div class="card_btn">
-                        <div class="button text" onclick="hub_set_disp_apply();">{com_apply}</div>
+                        <div class="button text" onclick="hub_conf_pfm_apply();">{com_apply}</div>
                     </div>
                 </div>
             </div>
             <div class="break"></div>
             <div class="card">
-                <div class="card_title text">{hub_set_sound}</div>
+                <div class="card_title text">{hub_conf_about}</div>
                 <div class="card_body">
-                    <div class="sub text">{hub_set_sound_vol}</div>
-                    <form>
-                        <div class="group">
-                            <input type="range" min="0" max="1000" step="1" id="hub_set_sound_vol_range"
-                                onchange="hub_set_sound_apply();" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="break"></div>
-            <div class="card">
-                <div class="card_title text">{hub_set_env}</div>
-                <div class="card_body">
-                    <div class="sub text">{hub_set_env_mode}</div>
-                    <form>
-                        <div class="group">
-                            <label class="label text">{hub_set_env_mode_save}</label>
-                            <input type="radio" name="cmode" id="hub_set_env_mode_save" />
-                        </div>
-                        <div class="group">
-                            <label class="label text">{hub_set_env_mode_nosave}</label>
-                            <input type="radio" name="cmode" id="hub_set_env_mode_nosave" />
-                        </div>
-                    </form>
-                    <div class="card_btn">
-                        <div class="button text" onclick="hub_set_env_apply();">{com_apply}</div>
+                    <img src="./img/flysoft.png" class="img" style="width: 150px;" />
+                    <div class="group">
+                        <label class="label">FlysoftPE Hub</label>
                     </div>
-                </div>
-            </div>
-            <div class="break"></div>
-            <div class="card">
-                <div class="card_title text">{hub_set_insider}</div>
-                <div class="card_body">
-                    <div class="sub text">{hub_set_insider_join}</div>
-                    <form>
-                        <div class="group">
-                            <input type="text" name="insider" id="hub_set_insider_join_code">
-                        </div>
-                    </form>
+                    <div class="group">
+                        <label class="label">Copyright (C) Flysoft.</label>
+                    </div>
+                    <div class="group">
+                        <label class="label text">{hub_conf_about_version}</label>
+                        <label class="label" id="hub_conf_about_version"></label>
+                    </div>
+                    <div class="group">
+                        <label class="label text">{hub_conf_about_os}</label>
+                        <label class="label" id="hub_conf_about_os"></label>
+                    </div>
+                    <div class="group">
+                        <label class="label text">{hub_conf_about_electron}</label>
+                        <label class="label" id="hub_conf_about_electron"></label>
+                    </div>
+                    <div class="group">
+                        <label class="label text">{hub_conf_about_chromium}</label>
+                        <label class="label" id="hub_conf_about_chromium"></label>
+                    </div>
+                    <div class="group">
+                        <label class="label text">{hub_conf_about_v8}</label>
+                        <label class="label" id="hub_conf_about_v8"></label>
+                    </div>
+                    <div class="group">
+                        <label class="label text">{hub_conf_about_node}</label>
+                        <label class="label" id="hub_conf_about_node"></label>
+                    </div>
                     <div class="card_btn">
-                        <div class="button text" onclick="hub_set_insider_join();" id="hub_set_insider_join_join">
-                            {com_join}</div>
+                        <div class="button button_no text" onclick="shell.openExternal('https://flysoft.tk');">
+                            {com_website}</div>
+                        <div class="button button_no text" onclick="remote.getCurrentWindow().openDevTools();">
+                            {com_dev}</div>
                     </div>
                 </div>
             </div>

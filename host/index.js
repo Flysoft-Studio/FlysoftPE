@@ -2,6 +2,7 @@ const electron = require("electron");
 const exec = require("child_process");
 const path = require("path");
 const fs = require("fs");
+const store = require("electron-store");
 const ipc = electron.ipcMain;
 const menu = electron.Menu;
 const app = electron.app;
@@ -86,6 +87,7 @@ app.on("ready", function () {
         app.exit();
     }
     require("@electron/remote/main").initialize();
+    store.initRenderer();
     menu.setApplicationMenu(null);
     ipc.on("get_args", function (sys) {
         sys.returnValue = args;
