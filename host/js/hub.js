@@ -55,6 +55,9 @@ var store = {
 
 com.init(() => {
     version.firstrun = fs.existsSync(root + "\\firstrun.fs");
+    if (version.firstrun == true) {
+        fs.rmSync(root + "\\firstrun.fs");
+    }
     if (packed == false) {
         com.selector(".color").classList.remove("color");
     }
