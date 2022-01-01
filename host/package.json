@@ -32,7 +32,6 @@
       "./data/**"
     ],
     "extraFiles": [
-      "update.cmd",
       "firstrun.fs",
       "LICENSE"
     ],

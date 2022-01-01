@@ -875,10 +875,6 @@ function hub_drv_reload() {
     }
 }
 
-function hub_update_resetbar() {
-    com.selector("#tab_update_progress").cloneNode()
-}
-
 function hub_update() {
     if (version.mirror == no) {
         var list = [];
@@ -942,8 +938,9 @@ function hub_update_hub() {
     no_sidebar = true;
     var link = version.api.hub.link;
     var update = () => {
+        fs.copyFileSync(dirname + "\\data\\update.cmd", dirname + "\\update.cmd");
         exec.exec("start cmd.exe /c \"" +
-            root + "\\update.cmd\"");
+            dirname + "\\update.cmd\"");
         app.exit();
     }
     com.selector("#tab_update_title").innerText = lang.get("hub_update_hub_title");

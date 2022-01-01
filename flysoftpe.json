@@ -5,8 +5,8 @@
         "sta": "http://flystatistics.gzs.vin/api/?op=add&key=flysoftkey&item=flysoftpe"
     },
     "hub": {
-        "latest": "9.0",
-        "latest_tool": "1.0",
+        "latest": "9.1",
+        "latest_tool": "2.0",
         "link": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=hub_asar",
         "link_tool": "https://api.flysoft.tk/download/flysoftpe.php?mode=download&soft=hub_tool"
     },

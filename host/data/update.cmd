@@ -3,7 +3,7 @@ title FlysoftPE Hub Update
 color 1E
 mode con:cols=40 lines=20
 chcp 65001 > nul
-cd /d "%~dp0"
+cd /d "%~dp0.."
 echo ========================================
 echo Updating FlysoftPE Hub...
 echo 正在更新 FlysoftPE Hub...
