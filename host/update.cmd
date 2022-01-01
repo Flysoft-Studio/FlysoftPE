@@ -12,7 +12,7 @@ timeout /T 5 /NOBREAK 2> nul 1> nul
 taskkill /f /t /im FlysoftPE.exe 2> nul 1> nul
 taskkill /f /t /im aria2c_hub.exe 2> nul 1> nul
 if exist ".\resources\tool.zip" (
-    ".\resources\data\7z.exe" x ".\resources\tool.zip" "-o.\resources" 2> nul 1> nul
+    ".\resources\data\7z.exe" x -y ".\resources\tool.zip" "-o.\resources" 2> nul 1> nul
     del /f ".\resources\tool.zip" 2> nul 1> nul
 )
 if exist ".\resources\app_update.asar" (

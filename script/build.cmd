@@ -14,7 +14,7 @@ if "%errorlevel%" neq "0" (
 )
 ::::::::::::::::::::::::::::::::::::::::::::
 
-set TOOL_VER=5.2
+set TOOL_VER=6.0
 set TOOL_ARG=%1
 set TOOL_ARG_FULL=full
 set TOOL_ARG_RELEASE=release
@@ -35,6 +35,7 @@ set TOOL_ARG_ISO_PLAN=iso_plan
 set TOOL_ARG_ISO_PACK=iso_pack
 set TOOL_ARG_PLUG_EXTRACT=plug_extract
 set TOOL_ARG_HUB_CLEANUP=hub_cleanup
+set TOOL_ARG_HUB_MAKE=hub_make
 set TOOL_ARG_HUB_ASAR=hub_asar
 set TOOL_ARG_HUB_TOOL=hub_tool
 set TOOL_ARG_HUB_FULL=hub_full
@@ -112,6 +113,7 @@ echo plug_extract - Extract files and registry
 echo.
 echo Hub:
 echo hub_cleanup - Cleanup Hub files
+echo hub_make - Create Base Package
 echo hub_asar - Create Asar Update Package
 echo hub_tool - Create Tool Update Package
 echo hub_full - Create Full Update Package
@@ -132,7 +134,6 @@ del /f /q /s "%PATH_HOST_R%\FlysoftPE Hub.zip"
 goto:eof
 
 :hub_make
-if "%NOMAKEHUB%" equ "true" goto:eof
 call:get_conf ENV_NPM no
 set NPM=%RETURN%
 cd /d "%PATH_HOST%"
@@ -151,19 +152,17 @@ cd /d "%PATH_CUR%"
 goto:eof
 
 :hub_asar
-call:hub_make
 copy /y "%PATH_HOST_DIST%\resources\app.asar" "%PATH_HOST_R%\app.asar"
 goto:eof
 
 :hub_tool
-call:hub_make
-del /f /q /s "%PATH_HOST_DIST%\resources\app.asar"
-7z a "%PATH_HOST_R%\tool.zip" "%PATH_HOST_DIST%\resources\*"
+move /y "%PATH_HOST_DIST%\resources\app.asar" "%PATH_TEMP%\temp_app.asar"
+7z a -y "%PATH_HOST_R%\tool.zip" "%PATH_HOST_DIST%\resources\*"
+move /y "%PATH_TEMP%\temp_app.asar" "%PATH_HOST_DIST%\resources\app.asar"
 goto:eof
 
 :hub_full
-call:hub_make
-7z a "%PATH_HOST_R%\FlysoftPE Hub.zip" "%PATH_HOST_DIST%\*"
+7z a -y "%PATH_HOST_R%\FlysoftPE Hub.zip" "%PATH_HOST_DIST%\*"
 goto:eof
 
 :conf

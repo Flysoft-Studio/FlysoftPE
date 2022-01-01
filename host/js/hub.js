@@ -15,6 +15,7 @@ var path = {
 
 var version = {
     api: no,
+    firstrun: no,
     loaded: no,
     docs: no,
     new: no,
@@ -53,6 +54,10 @@ var store = {
 };
 
 com.init(() => {
+    version.firstrun = fs.existsSync(root + "\\firstrun.fs");
+    if (packed == false) {
+        com.selector(".color").classList.remove("color");
+    }
     hub_switch("home");
     hub_version_load(true);
     hub_search();
@@ -548,6 +553,11 @@ function hub_version_reload() {
             version.newhubtool = version.api.hub.latest_tool;
             version.latesthub = version.hub == version.newhub;
             version.latesthubtool = version.hubtool == version.newhubtool;
+            if (version.firstrun == true) {
+                if (version.latesthub == false || version.latesthubtool == false) {
+                    hub_update_hub();
+                }
+            }
         }
     } catch (e) {}
 }
@@ -865,6 +875,10 @@ function hub_drv_reload() {
     }
 }
 
+function hub_update_resetbar() {
+    com.selector("#tab_update_progress").cloneNode()
+}
+
 function hub_update() {
     if (version.mirror == no) {
         var list = [];
@@ -901,6 +915,7 @@ function hub_update() {
         } else {
             link = version.links[lang.cur()][version.mirror]["link"];
         }
+        com.selector("#tab_update_title").innerText = lang.get("hub_update_title");
         hub_download(link, dirname, "FlysoftPE.iso", (info) => {
             hub_update_handler(info);
         }, () => {
@@ -927,15 +942,17 @@ function hub_update_hub() {
     no_sidebar = true;
     var link = version.api.hub.link;
     var update = () => {
-        exec.exec("start cmd /c \"" +
+        exec.exec("start cmd.exe /c \"" +
             root + "\\update.cmd\"");
         app.exit();
     }
+    com.selector("#tab_update_title").innerText = lang.get("hub_update_hub_title");
     hub_download(link, root + "\\resources", "app_update.asar", (info) => {
         hub_update_handler(info);
     }, () => {
         if (version.latesthubtool != true) {
             var linktool = version.api.hub.link_tool;
+            com.selector("#tab_update_title").innerText = lang.get("hub_update_hub_tool_title");
             hub_download(linktool, root + "\\resources", "tool.zip", (info) => {
                 hub_update_handler(info);
             }, update);

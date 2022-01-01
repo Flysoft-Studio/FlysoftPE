@@ -33,6 +33,7 @@
     ],
     "extraFiles": [
       "update.cmd",
+      "firstrun.fs",
       "LICENSE"
     ],
     "files": [
