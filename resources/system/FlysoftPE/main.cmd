@@ -22,7 +22,7 @@ set LOADPLUGIN=false
 mode con: cols=80 lines=12
 title FlysoftPE Loader
 call:log "FlysoftPE Loader"
-(reg query "HKLM\System\ControlSet001\Control\Nls\Language" /v "InstallLanguage" | find "0804" && set Lang=chs || set Lang=eng)>nul
+(reg query "HKLM\System\ControlSet001\Control\Nls\Language" /v "InstallLanguage" | find "0804" && set Lang=chs||set Lang=eng)>nul
 for %%i in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
     if exist "%%i:\FlysoftPE\flag.fs" (
         set FSPE_BOOT=%%i:
@@ -88,9 +88,9 @@ if exist "%FSPE_USER%\loading.log" (
     if exist "%FSPE_VAR%\FSPE_SAFEMODE.bin" (
         set FAILED=true
         set LOGOK=false
-    ) else (
-        del /f "%FSPE_USER%\loading.log"
     )
+    copy "%FSPE_USER%\loading.log" "%Desktop%\LAST_FAILED_STARTUP.log" /y
+    del /f "%FSPE_USER%\loading.log"
 )
 if "%LOGOK%" equ "true" (
     echo FlysoftPE Loading Log>>"%FSPE_USER%\loading.log"
@@ -240,6 +240,7 @@ call:themes
 if exist "%FSPE_USER%\config\wallpaper.jpg" (
     copy /y "%FSPE_USER%\config\wallpaper.jpg" "%SystemRoot%\Web\Wallpaper\Windows\img0.jpg"
 )
+set HUBPATH=%FSPE_EXT%\host\FlysoftPE.exe
 if exist "%FSPE_EXT%\host\FlysoftPE.exe" (
     call:log "Starting UIHost"
     echo FSPE_WATCH>"%FSPE_TEMP%\WATCH_INIT.tmp"
@@ -249,8 +250,9 @@ if exist "%FSPE_EXT%\host\FlysoftPE.exe" (
         start "" /high "%FSPE_EXT%\host\FlysoftPE.exe" --background
     )
     reg add "HKCR\DesktopBackground\Shell\FlysoftPE\command" /ve /t REG_SZ /d """%FSPE_EXT%\host\FlysoftPE.exe""" /f
-    reg add "HKCR\FlysoftPE.Hub\shell\open\command" /ve /t REG_SZ /d """%FSPE_EXT%\host\FlysoftPE.exe""" /f
-    reg add "HKCR\FlysoftPE.Hub\DefaultIcon" /ve /t REG_SZ /d "%FSPE_EXT%\host\FlysoftPE.exe,0" /f
+    reg add "HKCR\FlysoftPE.Hub\shell\open\command" /ve /t REG_SZ /d """%HUBPATH%""" /f
+    reg add "HKCR\FlysoftPE.Hub\DefaultIcon" /ve /t REG_SZ /d "%HUBPATH%,0" /f
+    reg add "HKCR\ms-settings\shell\open\command" /ve /t REG_SZ /d """%HUBPATH%""" /f
     echo.>"%AppData%\Microsoft\Windows\Network Shortcuts\FlysoftPE Hub.fshub"
 )
 if %Lang% equ chs (
@@ -261,7 +263,7 @@ if %Lang% equ chs (
 call:log "Setting font..."
 call:log "Preparing font config..."
 dpifix
-start "" "%SystemDrive%\FlysoftPE\tools\nomeiryoui.exe" "%SystemDrive%\FlysoftPE\res\fonts.ini" -set
+start "" "%SystemDrive%\FlysoftPE\tools\nomeiryoui.exe" "%SystemDrive%\FlysoftPE\res\fonts_%Lang%.ini" -set
 call:log "Setting color mode..."
 :boot_step_cmode
 if exist "%FSPE_USER%\config\cmode.bin" (
@@ -533,6 +535,7 @@ if "%FAILED%" equ "true" (
     call:warn "Detected loading log. Drivers will not be loaded."
     goto:eof
 )
+for /r "%SystemRoot%\System32\DriverStore" %%i in (net*.inf) do drvload %%i
 for /f "tokens=*" %%i in ('dir /ad /b "%PATH_EXT%"') do (
     call:log "Loading Driver: %%i"
     for /f "delims=" %%j in ('dir /b "%PATH_EXT%\%%i\*.inf"') do (

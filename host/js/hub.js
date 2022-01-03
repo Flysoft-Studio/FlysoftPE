@@ -83,6 +83,7 @@ function hub_version_load(init = false) {
         }
         if (init == true) hub_search();
     }).catch(() => {
+        version.api = no;
         version.loaded = true;
     });
 }
@@ -117,19 +118,24 @@ function hub_search() {
                 version.usb = fs.readFileSync(usb_cur + "\\version.fs").toString();
             }
             if (packed == true) {
-                if (version.sta.process == false) {
-                    if (version.sta.finish == false) {
-                        version.sta.process = true;
-                        com.get(version.api.api.sta).then((data) => {
-                            var json = JSON.parse(data);
-                            if (json.code == 0) {
-                                version.sta.finish = true;
-                            }
-                            version.sta.process = false;
-                        }).catch(() => {
-                            version.sta.process = false;
-                        });
+                try {
+                    if (version.sta.process == false) {
+                        if (version.sta.finish == false) {
+                            version.sta.process = true;
+                            com.get(version.api.api.sta).then((data) => {
+                                var json = JSON.parse(data.response);
+                                if (json.code == 0) {
+                                    version.sta.finish = true;
+                                }
+                                version.sta.process = false;
+                            }).catch(() => {
+                                version.sta.process = false;
+                            });
+                        }
                     }
+                } catch (e) {
+                    version.sta.finish == false;
+                    version.sta.process = false;
                 }
             }
             try {

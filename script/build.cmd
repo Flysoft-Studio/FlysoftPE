@@ -335,6 +335,9 @@ for /f "tokens=*" %%i in (%PATH_RES_COM%\software.txt) do (
 for /f "tokens=*" %%i in (%PATH_RES_COM%\drivers.txt) do (
     reg copy "HKLM\fs_os_drivers\%%i" "HKLM\fs_drivers\%%i" /S /F
 )
+for /f "tokens=*" %%i in (%PATH_RES_COM%\default.txt) do (
+    reg copy "HKLM\fs_os_default\%%i" "HKLM\fs_default\%%i" /S /F
+)
 regfind -p HKEY_LOCAL_MACHINE\fs_software\Classes\AppID -y Interactive User -r
 reg import "%PATH_RES_COM%\default.reg"
 reg import "%PATH_RES_COM%\software.reg"
@@ -350,6 +353,7 @@ reg load "HKLM\fs_drivers" "%PATH_SYS%\Windows\System32\config\DRIVERS"
 reg load "HKLM\fs_os_system" "%PATH_TEMP%\SYSTEM"
 reg load "HKLM\fs_os_drivers" "%PATH_TEMP%\DRIVERS"
 reg load "HKLM\fs_os_software" "%PATH_TEMP%\SOFTWARE"
+reg load "HKLM\fs_os_default" "%PATH_TEMP%\DEFAULT"
 goto:eof
 
 :core_hive_unload
@@ -377,6 +381,7 @@ call:log "Extracting registry from install.wim..."
 wimlib-imagex extract "%WIMFILE%" 1 "\Windows\System32\config\software" --no-acls --nullglob --dest-dir="%PATH_TEMP%"
 wimlib-imagex extract "%WIMFILE%" 1 "\Windows\System32\config\system" --no-acls --nullglob --dest-dir="%PATH_TEMP%"
 wimlib-imagex extract "%WIMFILE%" 1 "\Windows\System32\config\drivers" --no-acls --nullglob --dest-dir="%PATH_TEMP%"
+wimlib-imagex extract "%WIMFILE%" 1 "\Windows\System32\config\default" --no-acls --nullglob --dest-dir="%PATH_TEMP%"
 call:log "Removing assemblies..."
 for /f "delims=" %%i in (%PATH_RES_COM%\remove.txt) do (
     del /f /s /q "%PATH_SYS%\%%i"

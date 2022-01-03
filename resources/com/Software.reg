@@ -66,6 +66,14 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\Explorer\ControlPanel\NameSpace\{BB06C0E4-D293-4F75-8A90-CB05B6477EED}]
 @="System"
 
+;MS-Settings
+
+[-HKEY_LOCAL_MACHINE\fs_software\Classes\ms-settings]
+
+[HKEY_LOCAL_MACHINE\fs_software\Classes\ms-settings]
+@="URL:ms-settings"
+"URL Protocol"=""
+
 ;ContextMenu
 
 [-HKEY_LOCAL_MACHINE\fs_software\Classes\DesktopBackground\Shell\Display]
@@ -94,6 +102,7 @@ Windows Registry Editor Version 5.00
 [-HKEY_LOCAL_MACHINE\fs_software\Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\ModernSharing]
 [-HKEY_LOCAL_MACHINE\fs_software\Classes\Drive\shell\Powershell]
 [-HKEY_LOCAL_MACHINE\fs_software\Classes\.lnk\ShellNew]
+
 
 [HKEY_LOCAL_MACHINE\fs_software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "NoNetConnectDisconnect"=dword:00000001
@@ -266,5 +275,5 @@ Windows Registry Editor Version 5.00
 "Manufacturer"="FlysoftPE"
 "Model"="Unknown"
 "SupportHours"="10:00 - 20:30 (UTC/GMT+08:00)"
-"SupportURL"="https://flysoft.js.org/support/"
+"SupportPhone"="https://flysoft.tk/support"
 "Logo"="X:\\FlysoftPE\\res\\oem.bmp"
