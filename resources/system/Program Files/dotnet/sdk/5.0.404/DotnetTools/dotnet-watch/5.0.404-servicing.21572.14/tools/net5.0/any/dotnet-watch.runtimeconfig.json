@@ -1,0 +1,10 @@
+{
+  "runtimeOptions": {
+    "tfm": "net5.0",
+    "framework": {
+      "name": "Microsoft.AspNetCore.App",
+      "version": "5.0.13"
+    },
+    "rollForwardOnNoCandidateFx": 2
+  }
+}

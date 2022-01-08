@@ -1,0 +1,1009 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {},
+    ".NETCoreApp,Version=v5.0/win-x64": {
+      "Microsoft.Build.Tasks.Git/1.1.0-beta-20206-02": {},
+      "Microsoft.DiaSymReader.Pdb2Pdb/1.1.0-beta2-19575-01": {},
+      "Microsoft.DotNet.Build.Tasks.Installers/5.0.0-beta.21552.7": {},
+      "Microsoft.DotNet.Build.Tasks.Packaging/5.0.0-beta.21552.7": {},
+      "Microsoft.SourceLink.AzureRepos.Git/1.1.0-beta-20206-02": {
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.1.0-beta-20206-02",
+          "Microsoft.SourceLink.Common": "1.1.0-beta-20206-02"
+        }
+      },
+      "Microsoft.SourceLink.Common/1.1.0-beta-20206-02": {},
+      "Microsoft.SourceLink.GitHub/1.1.0-beta-20206-02": {
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.1.0-beta-20206-02",
+          "Microsoft.SourceLink.Common": "1.1.0-beta-20206-02"
+        }
+      },
+      "Microsoft.WindowsDesktop.App/5.0.13-servicing.21567.2": {
+        "dependencies": {
+          "runtime.win-x64.Microsoft.WindowsDesktop.App": "5.0.13-servicing.21567.2"
+        }
+      },
+      "runtime.win-x64.Microsoft.WindowsDesktop.App/5.0.13-servicing.21567.2": {
+        "runtime": {
+          "runtimes/win-x64/lib/net5.0/Accessibility.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/DirectWriteForwarder.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/Microsoft.VisualBasic.Forms.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/Microsoft.VisualBasic.dll": {
+            "assemblyVersion": "10.1.0.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/Microsoft.Win32.Registry.AccessControl.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationCore.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework-SystemCore.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework-SystemData.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework-SystemDrawing.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework-SystemXml.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework-SystemXmlLinq.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework.Aero.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework.Aero2.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework.AeroLite.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework.Classic.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework.Luna.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework.Royale.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationFramework.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/PresentationUI.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/ReachFramework.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/System.CodeDom.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Design.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Diagnostics.EventLog.Messages.dll": {
+            "assemblyVersion": "5.0.0.1",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Diagnostics.EventLog.dll": {
+            "assemblyVersion": "5.0.0.1",
+            "fileVersion": "5.0.321.7212"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Diagnostics.PerformanceCounter.dll": {
+            "assemblyVersion": "5.0.0.1",
+            "fileVersion": "5.0.321.7212"
+          },
+          "runtimes/win-x64/lib/net5.0/System.DirectoryServices.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "5.0.0.2",
+            "fileVersion": "5.0.1221.52207"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Drawing.Design.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Drawing.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/System.IO.Packaging.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Printing.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Resources.Extensions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Security.Cryptography.Pkcs.dll": {
+            "assemblyVersion": "5.0.0.1",
+            "fileVersion": "5.0.120.57516"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Security.Cryptography.Xml.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Security.Permissions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Threading.AccessControl.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Controls.Ribbon.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Extensions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Forms.Design.Editors.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Forms.Design.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Forms.Primitives.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Forms.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56701"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Input.Manipulations.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Windows.Presentation.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/System.Xaml.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/UIAutomationClient.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/UIAutomationClientSideProviders.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/UIAutomationProvider.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/UIAutomationTypes.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/WindowsBase.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/lib/net5.0/WindowsFormsIntegration.dll": {
+            "assemblyVersion": "5.0.13.0",
+            "fileVersion": "5.0.1321.56702"
+          }
+        },
+        "native": {
+          "runtimes/win-x64/native/D3DCompiler_47_cor3.dll": {
+            "fileVersion": "10.0.19041.685"
+          },
+          "runtimes/win-x64/native/PenImc_cor3.dll": {
+            "fileVersion": "5.0.1321.56702"
+          },
+          "runtimes/win-x64/native/PresentationNative_cor3.dll": {
+            "fileVersion": "5.0.1221.55402"
+          },
+          "runtimes/win-x64/native/vcruntime140_cor3.dll": {
+            "fileVersion": "14.29.30130.2"
+          },
+          "runtimes/win-x64/native/wpfgfx_cor3.dll": {
+            "fileVersion": "5.0.1321.56702"
+          }
+        },
+        "resources": {
+          "runtimes/win-x64/lib/net5.0/cs/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/PresentationCore.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/PresentationFramework.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/PresentationUI.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/ReachFramework.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/System.Windows.Forms.Design.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/System.Windows.Forms.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/System.Xaml.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/UIAutomationClient.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/UIAutomationProvider.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/UIAutomationTypes.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/WindowsBase.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/cs/WindowsFormsIntegration.resources.dll": {
+            "locale": "cs"
+          },
+          "runtimes/win-x64/lib/net5.0/de/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/PresentationCore.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/PresentationFramework.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/PresentationUI.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/ReachFramework.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/System.Windows.Forms.Design.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/System.Windows.Forms.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/System.Xaml.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/UIAutomationClient.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/UIAutomationProvider.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/UIAutomationTypes.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/WindowsBase.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/de/WindowsFormsIntegration.resources.dll": {
+            "locale": "de"
+          },
+          "runtimes/win-x64/lib/net5.0/es/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/PresentationCore.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/PresentationFramework.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/PresentationUI.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/ReachFramework.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/System.Windows.Forms.Design.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/System.Windows.Forms.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/System.Xaml.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/UIAutomationClient.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/UIAutomationProvider.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/UIAutomationTypes.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/WindowsBase.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/es/WindowsFormsIntegration.resources.dll": {
+            "locale": "es"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/PresentationCore.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/PresentationFramework.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/PresentationUI.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/ReachFramework.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/System.Windows.Forms.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/System.Windows.Forms.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/System.Xaml.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/UIAutomationClient.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/UIAutomationProvider.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/UIAutomationTypes.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/WindowsBase.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/fr/WindowsFormsIntegration.resources.dll": {
+            "locale": "fr"
+          },
+          "runtimes/win-x64/lib/net5.0/it/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/PresentationCore.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/PresentationFramework.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/PresentationUI.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/ReachFramework.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/System.Windows.Forms.Design.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/System.Windows.Forms.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/System.Xaml.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/UIAutomationClient.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/UIAutomationProvider.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/UIAutomationTypes.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/WindowsBase.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/it/WindowsFormsIntegration.resources.dll": {
+            "locale": "it"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/PresentationCore.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/PresentationFramework.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/PresentationUI.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/ReachFramework.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/System.Windows.Forms.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/System.Windows.Forms.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/System.Xaml.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/UIAutomationClient.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/UIAutomationProvider.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/UIAutomationTypes.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/WindowsBase.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ja/WindowsFormsIntegration.resources.dll": {
+            "locale": "ja"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/PresentationCore.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/PresentationFramework.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/PresentationUI.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/ReachFramework.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/System.Windows.Forms.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/System.Windows.Forms.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/System.Xaml.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/UIAutomationClient.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/UIAutomationProvider.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/UIAutomationTypes.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/WindowsBase.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/ko/WindowsFormsIntegration.resources.dll": {
+            "locale": "ko"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/PresentationCore.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/PresentationFramework.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/PresentationUI.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/ReachFramework.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/System.Windows.Forms.Design.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/System.Windows.Forms.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/System.Xaml.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/UIAutomationClient.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/UIAutomationProvider.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/UIAutomationTypes.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/WindowsBase.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pl/WindowsFormsIntegration.resources.dll": {
+            "locale": "pl"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/PresentationCore.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/PresentationFramework.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/PresentationUI.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/ReachFramework.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/System.Windows.Forms.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/System.Windows.Forms.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/System.Xaml.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/UIAutomationClient.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/UIAutomationProvider.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/UIAutomationTypes.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/WindowsBase.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/pt-BR/WindowsFormsIntegration.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/PresentationCore.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/PresentationFramework.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/PresentationUI.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/ReachFramework.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/System.Windows.Forms.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/System.Windows.Forms.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/System.Xaml.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/UIAutomationClient.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/UIAutomationProvider.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/UIAutomationTypes.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/WindowsBase.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/ru/WindowsFormsIntegration.resources.dll": {
+            "locale": "ru"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/PresentationCore.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/PresentationFramework.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/PresentationUI.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/ReachFramework.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/System.Windows.Forms.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/System.Windows.Forms.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/System.Xaml.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/UIAutomationClient.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/UIAutomationProvider.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/UIAutomationTypes.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/WindowsBase.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/tr/WindowsFormsIntegration.resources.dll": {
+            "locale": "tr"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/PresentationCore.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/PresentationFramework.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/PresentationUI.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/ReachFramework.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/System.Windows.Forms.Design.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/System.Windows.Forms.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/System.Xaml.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/UIAutomationClient.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/UIAutomationProvider.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/UIAutomationTypes.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/WindowsBase.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hans/WindowsFormsIntegration.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/Microsoft.VisualBasic.Forms.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/PresentationCore.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/PresentationFramework.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/PresentationUI.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/ReachFramework.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/System.Windows.Controls.Ribbon.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/System.Windows.Forms.Design.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/System.Windows.Forms.Primitives.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/System.Windows.Forms.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/System.Windows.Input.Manipulations.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/System.Xaml.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/UIAutomationClient.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/UIAutomationClientSideProviders.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/UIAutomationProvider.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/UIAutomationTypes.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/WindowsBase.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "runtimes/win-x64/lib/net5.0/zh-Hant/WindowsFormsIntegration.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "XliffTasks/1.0.0-beta.20502.2": {}
+    }
+  },
+  "libraries": {
+    "Microsoft.Build.Tasks.Git/1.1.0-beta-20206-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hZ9leS9Yd9MHpqvviMftSJFDcLYu2h1DrapW1TDm1s1fgOy71c8HvArNMd3fseVkXmp3VTfGnkgcw0FR+TI6xw==",
+      "path": "microsoft.build.tasks.git/1.1.0-beta-20206-02",
+      "hashPath": "microsoft.build.tasks.git.1.1.0-beta-20206-02.nupkg.sha512"
+    },
+    "Microsoft.DiaSymReader.Pdb2Pdb/1.1.0-beta2-19575-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kY6eTNkeWLHvfOjg97Q7tgQKrPpX+Y3fR6fS4nyfpgFLHBxHriLBR4v3e9t71it91gIMEeKUqOqrFJ7Pj48eHA==",
+      "path": "microsoft.diasymreader.pdb2pdb/1.1.0-beta2-19575-01",
+      "hashPath": "microsoft.diasymreader.pdb2pdb.1.1.0-beta2-19575-01.nupkg.sha512"
+    },
+    "Microsoft.DotNet.Build.Tasks.Installers/5.0.0-beta.21552.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U2RhQCuPd3RoRLq9PCkJndt3i990ymyDNNhoVcf66qY2Xii+1DcH5WlBVFgcSBRkOPnUmf0brWKWZ5Lutobolw==",
+      "path": "microsoft.dotnet.build.tasks.installers/5.0.0-beta.21552.7",
+      "hashPath": "microsoft.dotnet.build.tasks.installers.5.0.0-beta.21552.7.nupkg.sha512"
+    },
+    "Microsoft.DotNet.Build.Tasks.Packaging/5.0.0-beta.21552.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qKifuAWbwJv2dC9+Z/KGPl6bBHY8zLjKfTX6H44XxNXWPA9jLCcZ33KKTu85u4fWSzs4AfvjkZ3WX6P5pXGz2Q==",
+      "path": "microsoft.dotnet.build.tasks.packaging/5.0.0-beta.21552.7",
+      "hashPath": "microsoft.dotnet.build.tasks.packaging.5.0.0-beta.21552.7.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.AzureRepos.Git/1.1.0-beta-20206-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vVYhSds9TfraTQkGHHMDMVWnr3kCkTZ7vmqUmrXQBDJFXiWTuMoP5RRa9s1M/KmgB4szi5TOb7sOaHWKDT9qDA==",
+      "path": "microsoft.sourcelink.azurerepos.git/1.1.0-beta-20206-02",
+      "hashPath": "microsoft.sourcelink.azurerepos.git.1.1.0-beta-20206-02.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.Common/1.1.0-beta-20206-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aek0RTQ+4Bf11WvqaXajwYoaBWkX2edBjAr5XJOvhAsHX6/9vPOb7IpHAiE/NyCse7IcpGWslJZHNkv4UBEFqw==",
+      "path": "microsoft.sourcelink.common/1.1.0-beta-20206-02",
+      "hashPath": "microsoft.sourcelink.common.1.1.0-beta-20206-02.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.GitHub/1.1.0-beta-20206-02": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7A7P0EwL+lypaI/CEvG4IcpAlQeAt04uPPw1SO6Q9Jwz2nE9309pQXJ4TfP/RLL8IOObACidN66+gVR+bJDZHw==",
+      "path": "microsoft.sourcelink.github/1.1.0-beta-20206-02",
+      "hashPath": "microsoft.sourcelink.github.1.1.0-beta-20206-02.nupkg.sha512"
+    },
+    "Microsoft.WindowsDesktop.App/5.0.13-servicing.21567.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TZ6AhiZVITy0nVIqAuGwBWxCcL4PMV7WBeeJjNiMLRNCDHXnoKmv7Canx2mjv9PVCs55ZOUIyf5oPmo9eKxwPQ==",
+      "path": "microsoft.windowsdesktop.app/5.0.13-servicing.21567.2",
+      "hashPath": "microsoft.windowsdesktop.app.5.0.13-servicing.21567.2.nupkg.sha512"
+    },
+    "runtime.win-x64.Microsoft.WindowsDesktop.App/5.0.13-servicing.21567.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SAjUngtODcuXtZnaK3KOfCX/9rjQ5zxEnw9hlqBecpAQumaPIITMjJZf3WfDIEXgQLdLiQGD+36djv1gwUT5aQ==",
+      "path": "runtime.win-x64.microsoft.windowsdesktop.app/5.0.13-servicing.21567.2",
+      "hashPath": "runtime.win-x64.microsoft.windowsdesktop.app.5.0.13-servicing.21567.2.nupkg.sha512"
+    },
+    "XliffTasks/1.0.0-beta.20502.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fnLroyas9Lfo7+YWFHjfAALbTODgNDY4z8GB4uT9OKiqWwYje/bcW5QJuRCWCkGtC1uuAx9oxNYH/MZ9G9/fmw==",
+      "path": "xlifftasks/1.0.0-beta.20502.2",
+      "hashPath": "xlifftasks.1.0.0-beta.20502.2.nupkg.sha512"
+    }
+  }
+}
